@@ -1,8 +1,9 @@
 <script>
   import PropertyCard from '$lib/components/PropertyCard.svelte';
+  import { fadeUp, staggerFadeUp } from '$lib/actions/gsap';
   
-  const title = "Luxury Real Estate Listings | Diamond Estates";
-  const desc = "Browse our exclusive collection of luxury real estate, featuring premium mansions, penthouses, and stunning estates worldwide. Find your dream home today.";
+  const title = "Danh Sách Bất Động Sản Xa Xỉ | Diamond Boulevard";
+  const desc = "Duyệt qua bộ sưu tập bất động sản xa xỉ độc quyền, nổi bật với những dinh thự cao cấp, căn hộ penthouse và siêu biệt thự trên toàn thế giới.";
 
   let properties = $state([
     {
@@ -12,9 +13,9 @@
       price: 8500000,
       beds: 4,
       baths: 5,
-      sqft: 4200,
+      sqft: 420,
       imageUrl: '/images/property_1.png',
-      status: 'For Sale'
+      status: 'Đang Bán'
     },
     {
       id: 'prop-2',
@@ -23,9 +24,9 @@
       price: 15900000,
       beds: 6,
       baths: 8,
-      sqft: 8500,
+      sqft: 850,
       imageUrl: '/images/property_2.png',
-      status: 'Just Listed'
+      status: 'Vừa Lên Sàn'
     },
     {
       id: 'prop-3',
@@ -34,9 +35,9 @@
       price: 24500000,
       beds: 7,
       baths: 9,
-      sqft: 12000,
+      sqft: 1200,
       imageUrl: '/images/hero.png',
-      status: 'Exclusive'
+      status: 'Độc Quyền'
     },
     {
       id: 'prop-4',
@@ -45,9 +46,9 @@
       price: 12500000,
       beds: 8,
       baths: 9,
-      sqft: 9800,
+      sqft: 980,
       imageUrl: '/images/property_2.png',
-      status: 'For Sale'
+      status: 'Đang Bán'
     },
     {
       id: 'prop-5',
@@ -56,9 +57,9 @@
       price: 9800000,
       beds: 5,
       baths: 6,
-      sqft: 6500,
+      sqft: 650,
       imageUrl: '/images/property_1.png',
-      status: 'Under Offer'
+      status: 'Đang Giao Dịch'
     },
     {
       id: 'prop-6',
@@ -67,161 +68,56 @@
       price: 35000000,
       beds: 12,
       baths: 14,
-      sqft: 22000,
+      sqft: 2200,
       imageUrl: '/images/hero.png',
-      status: 'Exclusive'
+      status: 'Độc Quyền'
     }
   ]);
 
-  let filterType = $state('All');
+  let filterType = $state('Tất Cả');
 </script>
 
 <svelte:head>
   <title>{title}</title>
   <meta name="description" content={desc} />
-  
   <meta property="og:title" content={title} />
   <meta property="og:description" content={desc} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://diamondestates.example.com/properties" />
-  
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={desc} />
-
   <link rel="canonical" href="https://diamondestates.example.com/properties" />
 </svelte:head>
 
-<div class="page-header">
-  <div class="page-header-bg"></div>
-  <div class="container page-header-content">
-    <h1 class="heading-xl">Exclusive <span style="color: var(--accent-color)">Properties</span></h1>
-    <p class="subtitle">Discover our portfolio of extraordinary luxury residences curated for absolute perfection.</p>
+<div class="relative pt-40 pb-20 overflow-hidden bg-bg-secondary">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--accent-light)_0%,transparent_60%)] pointer-events-none"></div>
+  <div class="relative z-10 text-center max-w-7xl mx-auto px-6 md:px-8 gsap-reveal" use:fadeUp={{ y: 30, duration: 1 }}>
+    <h1 class="text-4xl md:text-[4.5rem] font-extrabold tracking-tight mb-6">Bất Động Sản <span class="text-accent">Độc Quyền</span></h1>
+    <p class="max-w-[600px] mx-auto text-[1.2rem] text-text-secondary">Khám phá danh mục các dinh thự xa xỉ phi thường được tuyển chọn cho sự hoàn hảo tuyệt đối.</p>
   </div>
 </div>
 
-<div class="container filters-section">
-  <div class="filter-controls glass">
-    <button class="filter-btn {filterType === 'All' ? 'active' : ''}" onclick={() => filterType = 'All'}>All Listings</button>
-    <button class="filter-btn {filterType === 'For Sale' ? 'active' : ''}" onclick={() => filterType = 'For Sale'}>For Sale</button>
-    <button class="filter-btn {filterType === 'Exclusive' ? 'active' : ''}" onclick={() => filterType = 'Exclusive'}>Exclusives</button>
-    <button class="filter-btn {filterType === 'Just Listed' ? 'active' : ''}" onclick={() => filterType = 'Just Listed'}>Just Listed</button>
+<div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-wrap justify-between items-center gap-6 mb-12 -mt-8 relative z-20">
+  <div class="flex flex-nowrap md:flex-wrap gap-2 p-2 rounded-xl bg-bg-color backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.05)] overflow-x-auto w-full md:w-auto">
+    <button class="bg-transparent border-none px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition-all {filterType === 'Tất Cả' ? 'bg-accent text-white' : 'text-text-secondary hover:text-text-color'}" onclick={() => filterType = 'Tất Cả'}>Tất cả</button>
+    <button class="bg-transparent border-none px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition-all {filterType === 'Đang Bán' ? 'bg-accent text-white' : 'text-text-secondary hover:text-text-color'}" onclick={() => filterType = 'Đang Bán'}>Đang Bán</button>
+    <button class="bg-transparent border-none px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition-all {filterType === 'Độc Quyền' ? 'bg-accent text-white' : 'text-text-secondary hover:text-text-color'}" onclick={() => filterType = 'Độc Quyền'}>Độc Quyền</button>
+    <button class="bg-transparent border-none px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition-all {filterType === 'Vừa Lên Sàn' ? 'bg-accent text-white' : 'text-text-secondary hover:text-text-color'}" onclick={() => filterType = 'Vừa Lên Sàn'}>Vừa Lên Sàn</button>
   </div>
-  <div class="results-count">
-    Showing {properties.length} ultimate properties
+  <div class="text-text-secondary font-medium w-full md:w-auto text-center md:text-right">
+    Hiển thị {properties.length} bất động sản đẳng cấp
   </div>
 </div>
 
-<section class="properties-container container">
-  <div class="property-grid animate-fade-in">
+<section class="max-w-7xl mx-auto px-6 md:px-8 pb-24 min-h-[60vh]">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" use:staggerFadeUp={{ y: 30, stagger: 0.1 }}>
     {#each properties as property (property.id)}
-      {#if filterType === 'All' || property.status === filterType}
-        <PropertyCard {property} />
+      {#if filterType === 'Tất Cả' || property.status === filterType}
+        <div class="gsap-reveal">
+          <PropertyCard {property} />
+        </div>
       {/if}
     {/each}
   </div>
 </section>
-
-<style>
-  .page-header {
-    position: relative;
-    padding: 10rem 0 5rem;
-    overflow: hidden;
-    background-color: var(--bg-secondary);
-  }
-
-  .page-header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: radial-gradient(circle at top right, var(--accent-light) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .page-header-content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-  }
-
-  .subtitle {
-    max-width: 600px;
-    margin: 1.5rem auto 0;
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-  }
-
-  .filters-section {
-    margin-top: -2rem;
-    position: relative;
-    z-index: 20;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-  }
-
-  .filter-controls {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    border-radius: var(--radius-lg);
-    background: var(--bg-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  }
-
-  .filter-btn {
-    background: transparent;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    cursor: pointer;
-    font-family: inherit;
-    color: var(--text-secondary);
-    transition: all 0.3s ease;
-  }
-
-  .filter-btn:hover {
-    color: var(--text-color);
-  }
-
-  .filter-btn.active {
-    background: var(--accent-color);
-    color: white;
-  }
-
-  .results-count {
-    color: var(--text-secondary);
-    font-weight: 500;
-  }
-
-  .properties-container {
-    padding-bottom: 6rem;
-    min-height: 60vh;
-  }
-
-  .property-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .filter-controls {
-      width: 100%;
-      overflow-x: auto;
-    }
-    .filter-btn {
-      white-space: nowrap;
-    }
-    .results-count {
-      width: 100%;
-      text-align: center;
-    }
-  }
-</style>

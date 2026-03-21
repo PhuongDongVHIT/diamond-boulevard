@@ -1,178 +1,56 @@
 <script>
-  // GlobalMarkets.svelte
+  import { fadeUp, staggerFadeUp } from '$lib/actions/gsap';
   const markets = [
     {
       id: 'ny',
       name: 'New York',
-      description: 'Penthouses with central park views and historic townhouses.',
+      description: 'Penthouse với tầm nhìn công viên trung tâm và nhà phố lịch sử.',
       colorStart: '#0f172a',
       colorEnd: '#1e293b'
     },
     {
       id: 'la',
       name: 'Los Angeles',
-      description: 'Modern glass estates and sprawling celebrity compounds.',
+      description: 'Dinh thự kính hiện đại và các khu phức hợp của giới siêu sao.',
       colorStart: '#1e3a8a',
       colorEnd: '#172554'
     },
     {
       id: 'miami',
       name: 'Miami',
-      description: 'Oceanfront villas and ultra-luxury condo towers.',
+      description: 'Biệt thự hướng biển và tháp căn hộ siêu sang.',
       colorStart: '#064e3b',
       colorEnd: '#022c22'
     },
     {
       id: 'dubai',
       name: 'Dubai',
-      description: 'Architectural marvels and exclusive island retreats.',
+      description: 'Tuyệt tác kiến trúc và khu nghỉ dưỡng biển đảo độc quyền.',
       colorStart: '#451a03',
       colorEnd: '#290f02'
     }
   ];
 </script>
 
-<section class="global-markets">
-  <div class="container">
-    <div class="header-container">
-      <h2 class="heading-lg">Global Reach, <br/><span style="color: var(--accent-color)">Local Expertise</span></h2>
-      <p class="section-desc">We operate in the world's most exclusive real estate markets, providing you with seamless access to elite properties globally.</p>
+<section class="py-32 bg-bg-color">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="text-center max-w-[700px] mx-auto mb-20 gsap-reveal" use:fadeUp={{ y: 30, duration: 1 }}>
+      <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight leading-tight">Tầm Vóc Quốc Tế, <br/><span class="text-accent">Chuyên Môn Địa Phương</span></h2>
+      <p class="text-[1.15rem] text-text-secondary mt-4 leading-relaxed">Chúng tôi hoạt động tại những thị trường bất động sản độc quyền nhất thế giới, cung cấp quyền tiếp cận liền mạch với các bất động sản tinh hoa toàn cầu.</p>
     </div>
 
-    <div class="markets-grid">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" use:staggerFadeUp={{ y: 40, stagger: 0.1 }}>
       {#each markets as market}
-        <a href={`/markets/${market.id}`} class="market-card" style="--gradient-start: {market.colorStart}; --gradient-end: {market.colorEnd};">
-          <div class="bg-overlay"></div>
-          <div class="card-content">
-            <h3>{market.name}</h3>
-            <p>{market.description}</p>
-            <div class="explore-btn">Explore Market <span class="arrow">→</span></div>
+        <a href={`/markets/${market.id}`} class="relative h-[380px] rounded-[1.5rem] overflow-hidden no-underline text-white flex flex-col justify-end p-10 shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-border-color bg-text-color group gsap-reveal" style="--gradient-start: {market.colorStart}; --gradient-end: {market.colorEnd};">
+          <div class="absolute inset-0 bg-gradient-to-br from-[var(--gradient-start)] to-[var(--gradient-end)] opacity-85 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105 z-10"></div>
+          <div class="absolute -inset-[50%] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_60%)] z-20 transition-transform duration-[800ms] ease-in-out scale-80 -translate-x-[10%] -translate-y-[10%] group-hover:scale-100 group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none"></div>
+          <div class="relative z-30 transition-transform duration-300 group-hover:-translate-y-1">
+            <h3 class="text-[2rem] font-bold mb-2 text-white">{market.name}</h3>
+            <p class="text-white/80 text-[1.05rem] mb-6 leading-relaxed line-clamp-2">{market.description}</p>
+            <div class="inline-flex items-center gap-2 font-semibold text-[0.95rem] uppercase tracking-[1px] text-white">Khám phá Thị trường <span class="transition-transform duration-150 group-hover:translate-x-1">→</span></div>
           </div>
         </a>
       {/each}
     </div>
   </div>
 </section>
-
-<style>
-  .global-markets {
-    padding: 8rem 0;
-    background-color: var(--bg-color);
-  }
-
-  .header-container {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 5rem;
-  }
-
-  .section-desc {
-    color: var(--text-secondary);
-    font-size: 1.15rem;
-    margin-top: 1rem;
-    line-height: 1.8;
-  }
-
-  .markets-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .market-card {
-    position: relative;
-    height: 380px;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 2.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border: 1px solid var(--border-color);
-    background-color: var(--text-color);
-  }
-
-  .market-card .bg-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    opacity: 0.85;
-    transition: opacity var(--transition-normal), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1;
-  }
-
-  .market-card::before {
-    /* Subtle geometric pattern overlay simulated with box-shadows / gradients */
-    content: '';
-    position: absolute;
-    inset: -50%;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 60%);
-    z-index: 2;
-    transition: transform 0.8s ease-in-out;
-    transform: scale(0.8) translate(-10%, -10%);
-  }
-
-  .card-content {
-    position: relative;
-    z-index: 3;
-    transition: transform var(--transition-normal);
-  }
-
-  .market-card h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: white;
-  }
-
-  .market-card p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.05rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .explore-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-  }
-
-  .arrow {
-    transition: transform var(--transition-fast);
-  }
-
-  .market-card:hover {
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  }
-
-  .market-card:hover .bg-overlay {
-    opacity: 1;
-    transform: scale(1.05); /* subtle zoom effect on hover */
-  }
-
-  .market-card:hover::before {
-    transform: scale(1) translate(0, 0);
-  }
-
-  .market-card:hover .card-content {
-    transform: translateY(-5px);
-  }
-
-  .market-card:hover .arrow {
-    transform: translateX(5px);
-  }
-</style>

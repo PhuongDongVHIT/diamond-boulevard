@@ -1,235 +1,64 @@
 <script>
-  // LocationMap.svelte
+  import { fadeUp, staggerFadeUp } from '$lib/actions/gsap';
   const locations = [
-    { name: "International Airport", distance: "15 mins", icon: "✈️" },
-    { name: "Financial District", distance: "20 mins", icon: "🏢" },
-    { name: "Luxury Marina", distance: "5 mins", icon: "🛥️" },
-    { name: "Designer Boutiques", distance: "10 mins", icon: "🛍️" },
+    { name: "Sân Golf Sông Bé", distance: "2 phút", icon: "⛳" },
+    { name: "AEON Mall Bình Dương", distance: "5 phút", icon: "🛍️" },
+    { name: "Trung Tâm Thủ Dầu Một", distance: "10 phút", icon: "🏙️" },
+    { name: "Landmark 81 (TP.HCM)", distance: "20 phút", icon: "🌆" },
   ];
+
+  function handleImageError(e) {
+    const target = e.currentTarget;
+    if (target) {
+      target.style.display = 'none';
+      if (target.nextElementSibling) {
+        target.nextElementSibling.style.display = 'flex';
+      }
+    }
+  }
 </script>
 
-<section class="location-section">
-  <div class="container grid-layout">
-    <div class="content-side">
-      <h2 class="heading-lg">Unrivaled <br><span class="accent-text">Connectivity</span></h2>
-      <p class="body-text">
-        Situated in the city's most coveted enclave, the project offers sanctuary from the bustle while maintaining effortless proximity to global transit hubs and prime cultural districts.
+<section class="py-32 bg-bg-color relative overflow-hidden">
+  <div class="absolute -bottom-[20%] -right-[10%] w-[800px] h-[800px] bg-[radial-gradient(circle,var(--accent-light)_0%,transparent_70%)] rounded-full z-0 opacity-40 pointer-events-none"></div>
+  
+  <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-center relative z-10">
+    <div class="gsap-reveal" use:fadeUp={{ x: -40, y: 0 }}>
+      <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight leading-tight">Mặt Tiền <br><span class="text-accent">Quốc Lộ 13</span></h2>
+      <p class="text-[1.15rem] text-text-secondary my-8 leading-relaxed">
+        Tọa lạc tại mặt tiền Đại lộ Bình Dương - tuyến đường huyết mạch của khu vực, Diamond Boulevard mang thiết kế hiện đại với hệ sinh thái giao thương đẳng cấp và tầm nhìn Panorama đắt giá bậc nhất hướng về Sân Golf và Landmark 81.
       </p>
       
-      <div class="locations-list">
+      <div class="flex flex-col gap-6 pt-4" use:staggerFadeUp={{ x: -30, y: 0, stagger: 0.1 }}>
         {#each locations as loc}
-          <div class="loc-item">
-            <span class="loc-icon">{loc.icon}</span>
-            <span class="loc-name">{loc.name}</span>
-            <div class="loc-distance-bar">
-              <span class="loc-distance">{loc.distance}</span>
+          <div class="flex items-center gap-6 py-4 border-b border-border-color gsap-reveal">
+            <span class="text-2xl bg-bg-secondary w-[50px] h-[50px] rounded-full flex items-center justify-center border border-border-color shadow-sm">{loc.icon}</span>
+            <span class="text-[1.1rem] font-semibold text-text-color min-w-[200px]">{loc.name}</span>
+            <div class="flex-grow flex justify-end">
+              <span class="bg-accent-light text-accent border border-accent/20 shadow-[0_2px_10px_rgba(239,101,34,0.1)] px-4 py-1.5 rounded-full font-bold text-[0.9rem] tracking-[0.5px] whitespace-nowrap">{loc.distance}</span>
             </div>
           </div>
         {/each}
       </div>
     </div>
     
-    <div class="map-side">
-      <div class="map-container glass">
-        <!-- Abstract map visual -->
-        <div class="map-bg"></div>
-        <div class="pin center-pin">
-          <div class="pulse"></div>
-          💎
+    <div class="h-[450px] lg:h-[600px] gsap-reveal relative mt-8 lg:mt-0" use:fadeUp={{ x: 40, y: 0, delay: 0.2 }}>
+      <div class="w-full h-full rounded-[1.5rem] relative overflow-hidden p-3 md:p-4 border border-border-color bg-white/70 dark:bg-slate-900/75 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.05)]">
+        <div class="w-full h-full rounded-xl bg-slate-100 dark:bg-slate-800 relative overflow-hidden flex items-center justify-center border border-border-color">
+          <!-- svelte-ignore a11y_img_redundant_alt -->
+          <img src="/images/location.jpg" alt="Vị trí Diamond Boulevard" class="w-full h-full object-cover opacity-80" onerror={handleImageError} />
+          <!-- Placeholder map graphic if image not found -->
+          <div class="hidden flex-col items-center justify-center text-text-secondary w-full h-full bg-[radial-gradient(circle_at_center,var(--border-color)_1px,transparent_1px)] bg-[size:20px_20px]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+            <p class="text-lg">Tải ảnh bản đồ vị trí</p>
+            <code class="mt-2 text-sm bg-bg-color px-2 py-1 rounded">static/images/location.jpg</code>
+          </div>
         </div>
-        <div class="pin loc-1" style="top: 20%; left: 80%;">✈️</div>
-        <div class="pin loc-2" style="top: 70%; left: 20%;">🏢</div>
-        <div class="pin loc-3" style="top: 50%; left: 60%;">🛥️</div>
+        
+        <div class="absolute bg-white dark:bg-slate-800 border-[3px] border-accent w-[60px] h-[60px] rounded-full flex items-center justify-center shadow-xl text-3xl font-black text-accent top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+          <div class="absolute inset-0 bg-accent rounded-full -z-10 opacity-40 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+          D
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  .location-section {
-    padding: 8rem 0;
-    background-color: var(--bg-color);
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Decorative background */
-  .location-section::before {
-    content: '';
-    position: absolute;
-    bottom: -20%;
-    right: -10%;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 0;
-    opacity: 0.4;
-  }
-
-  .grid-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 6rem;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .accent-text {
-    color: var(--accent-color);
-  }
-
-  .body-text {
-    font-size: 1.15rem;
-    color: var(--text-secondary);
-    margin: 2rem 0 3rem;
-    line-height: 1.8;
-  }
-
-  .locations-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .loc-item {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .loc-icon {
-    font-size: 1.5rem;
-    background: var(--bg-secondary);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .loc-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-color);
-    min-width: 160px;
-  }
-
-  .loc-distance-bar {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .loc-distance {
-    background: var(--accent-light);
-    color: var(--accent-color);
-    padding: 0.4rem 1rem;
-    border-radius: 100px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-  }
-
-  .map-side {
-    height: 600px;
-  }
-
-  .map-container {
-    width: 100%;
-    height: 100%;
-    border-radius: var(--radius-xl);
-    position: relative;
-    overflow: hidden;
-    padding: 1rem;
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-  }
-
-  .map-bg {
-    width: 100%;
-    height: 100%;
-    border-radius: var(--radius-lg);
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-color) 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Abstract roads/rivers */
-  .map-bg::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: 20%;
-    width: 100px;
-    height: 200%;
-    background: rgba(37, 99, 235, 0.03);
-    transform: rotate(30deg);
-  }
-  
-  .map-bg::after {
-    content: '';
-    position: absolute;
-    top: 40%;
-    left: -20%;
-    width: 150%;
-    height: 60px;
-    background: rgba(37, 99, 235, 0.05);
-    transform: rotate(-15deg);
-  }
-
-  .pin {
-    position: absolute;
-    background: white;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    font-size: 1.2rem;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    border: 2px solid white;
-  }
-
-  .center-pin {
-    top: 50%;
-    left: 45%;
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-    background: var(--bg-color);
-    border: 3px solid var(--accent-color);
-  }
-
-  .pulse {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.5;
-    animation: pulseAnim 2s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-
-  @keyframes pulseAnim {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(2.5); opacity: 0; }
-  }
-
-  @media (max-width: 1024px) {
-    .grid-layout {
-      grid-template-columns: 1fr;
-    }
-    .map-side {
-      height: 450px;
-    }
-  }
-</style>

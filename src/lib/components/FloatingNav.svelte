@@ -17,7 +17,6 @@
   ];
 
   function handleScroll() {
-    // Simple mock logic for scroll spy. In a real app this uses IntersectionObserver.
     const scroll = window.scrollY;
     if (scroll < 800) activeSection = 1;
     else if (scroll < 1600) activeSection = 2;
@@ -29,164 +28,32 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div class="floating-nav left-nav">
-  <div class="nav-track">
+<div class="fixed top-1/2 -translate-y-1/2 z-[100] left-8 hidden lg:block">
+  <div class="flex flex-col gap-8 relative">
+    <div class="absolute left-[12px] top-[10px] bottom-[10px] w-[2px] bg-black/10 dark:bg-white/10 -z-10"></div>
     {#each sections as section}
-      <button class="nav-dot {activeSection === section.id ? 'active' : ''}">
-        <span class="label">{section.label}</span>
+      <button class="bg-transparent border-none flex items-center cursor-pointer text-[0.9rem] font-bold transition-colors p-0 {activeSection === section.id ? 'text-accent' : 'text-text-secondary'}">
+        {#if activeSection === section.id}
+          <div class="w-[26px] h-[2px] bg-accent -mr-[26px] relative z-10"></div>
+        {:else}
+          <div class="w-[26px] h-[2px] bg-transparent"></div>
+        {/if}
+        <span class="relative z-20" class:ml-[26px]={activeSection !== section.id}>{section.label}</span>
       </button>
     {/each}
   </div>
 </div>
 
-<div class="floating-nav right-nav">
+<div class="fixed top-1/2 -translate-y-1/2 z-[100] right-4 lg:right-8 flex flex-col gap-4 items-end">
   {#each socialLinks as link}
-    <button class="social-fab {link.isAccent ? 'accent-fab' : 'white-fab'}" style="color: {link.iconColor || 'white'}">
+    <button class="rounded-full flex items-center justify-center cursor-pointer shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-200 hover:scale-110 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] font-bold {link.isAccent ? 'bg-accent text-white w-14 h-14 lg:w-[60px] lg:h-[60px] text-[1.1rem]' : 'bg-bg-color w-11 h-11 lg:w-[50px] lg:h-[50px] text-[1.2rem]'}" style="color: {link.iconColor || 'inherit'}">
       {#if link.id === '360'}
-        <span>360°</span>
+        <span>360&deg;</span>
       {:else if link.id === 'Zalo'}
-        <span class="zalo-text">Zalo</span>
+        <span class="text-xs">Zalo</span>
       {:else}
-        <span class="icon">{link.id}</span>
+        <span>{link.id}</span>
       {/if}
     </button>
   {/each}
 </div>
-
-<style>
-  .floating-nav {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-  }
-
-  /* Left Vertical Nav */
-  .left-nav {
-    left: 2rem;
-  }
-
-  .nav-track {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    position: relative;
-  }
-
-  /* Connecting line behind dots */
-  .nav-track::before {
-    content: '';
-    position: absolute;
-    left: 12px;
-    top: 10px;
-    bottom: 10px;
-    width: 2px;
-    background: rgba(0,0,0,0.1);
-    z-index: -1;
-  }
-  
-  :global(.dark) .nav-track::before {
-    background: rgba(255,255,255,0.1);
-  }
-
-  .nav-dot {
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--text-secondary);
-    transition: all var(--transition-fast);
-    padding: 0;
-  }
-
-  .nav-dot:not(.active)::before {
-    content: '';
-    display: block;
-    width: 26px;
-    height: 2px;
-    background: transparent;
-  }
-
-  .nav-dot.active {
-    color: var(--accent-color);
-  }
-
-  .nav-dot.active::before {
-    content: '';
-    display: block;
-    width: 26px;
-    height: 2px;
-    background: var(--accent-color);
-    margin-right: -26px;
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Right Action FABs */
-  .right-nav {
-    right: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-end;
-  }
-
-  .social-fab {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    font-weight: bold;
-  }
-
-  .social-fab:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  }
-
-  .accent-fab {
-    background: var(--accent-color);
-    width: 60px;
-    height: 60px; /* Make 360 slightly larger as per target */
-    color: white !important;
-    font-size: 1.1rem;
-  }
-
-  .white-fab {
-    background: var(--bg-color);
-    font-size: 1.2rem;
-  }
-
-  .zalo-text {
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 1024px) {
-    .left-nav {
-      display: none;
-    }
-    
-    .right-nav {
-      right: 1rem;
-    }
-    
-    .social-fab {
-      width: 44px;
-      height: 44px;
-    }
-    
-    .accent-fab {
-      width: 54px;
-      height: 54px;
-    }
-  }
-</style>

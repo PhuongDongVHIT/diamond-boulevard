@@ -1,202 +1,59 @@
 <script>
-  // Products.svelte
+  import { fadeUp } from '$lib/actions/gsap';
+
   const products = [
     {
       id: "signature",
-      title: "The Signature Villa",
-      subtitle: "6 Bedrooms | 12,000 Sq.Ft.",
-      desc: "An architectural marvel featuring multiple cascading levels, an indoor-outdoor living concept, and a private supercar gallery. Built for those who demand ultimate space and prestige.",
-      features: ["Private Cinema", "Infinity Edge Pool", "Smart Home Integration"],
+      title: "Biệt thự Signature",
+      subtitle: "6 Phòng ngủ | 1,100 m²",
+      desc: "Một kỳ quan kiến trúc đặc trưng bởi các tầng lầu đan xen, mô hình không gian mở và buồng trưng bày siêu xe riêng tư. Dành riêng cho những chủ nhân tìm kiếm không gian sống đẳng cấp.",
+      features: ["Rạp Chiếu Phim Riêng", "Hồ Bơi Vô Cực", "Nhà Thông Minh Hiện Đại"],
       align: "left"
     },
     {
       id: "penthouse",
-      title: "Penthouse Collection",
-      subtitle: "4 Bedrooms | 8,500 Sq.Ft.",
-      desc: "Crowning the highest floors, these penthouses offer unobstructed 360-degree views, double-height ceilings, and private rooftop terraces with dining pavilions.",
-      features: ["Private Elevator", "Rooftop Terrace", "Chef's Kitchen"],
+      title: "Bộ Sưu Tập Penthouse",
+      subtitle: "4 Phòng ngủ | 800 m²",
+      desc: "Ngự trị tại những tầng cao nhất, các căn Penthouse mang đến tầm nhìn 360 độ tuyệt mỹ, thiết kế trần thông tầng và sân thượng riêng biệt với các sảnh yến tiệc sang trọng.",
+      features: ["Thang Máy Riêng", "Sân Thượng Dành Riêng", "Bếp Trưởng Đẳng Cấp"],
       align: "right"
     }
   ];
 </script>
 
-<section class="products-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="heading-lg">The <span style="color: var(--accent-color)">Collections</span></h2>
-      <p class="section-desc">Discover the masterful product typologies available in this exclusive release.</p>
+<section class="py-32 bg-bg-color">
+  <div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-24 gsap-reveal" use:fadeUp={{ y: 30 }}>
+      <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight">Bộ Sưu Tập <span class="text-accent">Tinh Hoa</span></h2>
+      <p class="text-[1.15rem] text-text-secondary mt-4">Khám phá các dòng sản phẩm kiệt tác trong đợt ra mắt độc quyền này.</p>
     </div>
 
-    <div class="products-list">
+    <div class="flex flex-col gap-32">
       {#each products as product}
-        <div class={`product-row align-${product.align}`}>
-          <div class="product-image-container glass">
-            <div class="image-placeholder">
-              <!-- Geometric abstraction for property -->
-              <div class="geo-shape"></div>
-              <div class="geo-shape alt"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center gsap-reveal" use:fadeUp={{ y: 40, duration: 0.8 }}>
+          <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative p-8 flex items-center justify-center bg-white/70 dark:bg-slate-900/75 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.05)] {product.align === 'right' ? 'lg:order-2' : ''}">
+            <div class="w-full h-full relative bg-gradient-to-br from-bg-secondary to-bg-color rounded-2xl shadow-[inset_0_0_30px_rgba(0,0,0,0.05)] overflow-hidden">
+              <div class="absolute bottom-0 left-[20%] w-[60%] h-[70%] bg-text-color opacity-5 rounded-t-sm"></div>
+              <div class="absolute bottom-0 left-[40%] w-[50%] h-[40%] bg-accent opacity-10 rounded-t-sm"></div>
             </div>
           </div>
-          <div class="product-info">
-            <h4 class="product-subtitle">{product.subtitle}</h4>
-            <h3 class="product-title">{product.title}</h3>
-            <p class="product-desc">{product.desc}</p>
+          <div class="{product.align === 'right' ? 'lg:order-1' : ''}">
+            <h4 class="text-[0.95rem] text-accent uppercase tracking-[2px] mb-4 font-bold">{product.subtitle}</h4>
+            <h3 class="text-[2.5rem] text-text-color mb-6 leading-[1.2] font-extrabold">{product.title}</h3>
+            <p class="text-[1.1rem] text-text-secondary leading-relaxed mb-8">{product.desc}</p>
             
-            <ul class="feature-list">
+            <ul class="flex flex-col gap-4 mb-10 list-none p-0">
               {#each product.features as feature}
-                <li><span class="bullet"></span>{feature}</li>
+                <li class="flex items-center gap-4 text-[1.05rem] text-text-color font-medium">
+                  <span class="w-2 h-2 bg-accent rounded-full shadow-[0_0_10px_var(--accent-color)]"></span>
+                  {feature}
+                </li>
               {/each}
             </ul>
-            
-            <button class="btn btn-primary mt-action">View Specifications</button>
+            <button class="inline-flex items-center justify-center px-10 py-4 rounded-full font-semibold transition-all bg-accent text-white text-[1.05rem] shadow-[0_4px_14px_rgba(239,101,34,0.3)] hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(239,101,34,0.4)]">Xem Thông Số Kỹ Thuật</button>
           </div>
         </div>
       {/each}
     </div>
   </div>
 </section>
-
-<style>
-  .products-section {
-    padding: 8rem 0;
-    background-color: var(--bg-color);
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 6rem;
-  }
-
-  .section-desc {
-    color: var(--text-secondary);
-    font-size: 1.15rem;
-    margin-top: 1rem;
-  }
-
-  .products-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
-  }
-
-  .product-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .product-row.align-right .product-image-container {
-    order: 2;
-  }
-  .product-row.align-right .product-info {
-    order: 1;
-  }
-
-  .product-image-container {
-    width: 100%;
-    aspect-ratio: 4/3;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    position: relative;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .image-placeholder {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-color) 100%);
-    border-radius: var(--radius-lg);
-    box-shadow: inset 0 0 30px rgba(0,0,0,0.05);
-    overflow: hidden;
-  }
-
-  .geo-shape {
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    width: 60%;
-    height: 70%;
-    background: var(--text-color);
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    opacity: 0.05;
-  }
-
-  .geo-shape.alt {
-    left: 40%;
-    height: 40%;
-    width: 50%;
-    background: var(--accent-color);
-    opacity: 0.1;
-  }
-
-  .product-subtitle {
-    color: var(--accent-color);
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  .product-title {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    font-weight: 800;
-  }
-
-  .product-desc {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-  }
-
-  .feature-list {
-    list-style: none;
-    margin-bottom: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .feature-list li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.05rem;
-    color: var(--text-color);
-    font-weight: 500;
-  }
-
-  .bullet {
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent-color);
-  }
-
-  .mt-action {
-    padding: 1rem 2.5rem;
-    font-size: 1.05rem;
-  }
-
-  @media (max-width: 992px) {
-    .product-row {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-    
-    .product-row.align-right .product-image-container,
-    .product-row.align-right .product-info {
-      order: unset;
-    }
-  }
-</style>

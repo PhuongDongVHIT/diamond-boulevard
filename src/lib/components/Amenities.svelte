@@ -1,145 +1,30 @@
 <script>
-  // Amenities.svelte
+  import { fadeUp, staggerFadeUp } from '$lib/actions/gsap';
   const amenities = [
-    { title: "Infinity Pool Oasis", icon: "Waves", desc: "Temperature-controlled Olympic size pools overlooking the horizon." },
-    { title: "Private Cinema", icon: "Film", desc: "Dolby Atmos equipped 20-seat theatre for exclusive screenings." },
-    { title: "Wellness Spa", icon: "Spa", desc: "State-of-the-art hydrotherapy, massage rooms, and Himalayan salt caves." },
-    { title: "Helipad Access", icon: "Helicopter", desc: "Private roof-top landing zones providing discrete sky-commutes." },
-    { title: "Michelin Dining", icon: "Utensils", desc: "In-house culinary experiences curated by world-renowned chefs." },
-    { title: "Elite Fitness Center", icon: "Dumbbell", desc: "A 10,000 sq ft performance hub with cryotherapy chambers." },
+    "Cổng chào", "Chốt an ninh", "Đường xuống hầm", "Đường nội bộ",
+    "Tiểu cảnh sân vườn", "Lối xuống hầm giữ xe", "Đài phun nước", "Sảnh đón",
+    "Nhà trẻ", "Khu thương mại", "Ban quản lý", "Lối lên",
+    "Khu BBQ", "Hồ bơi trẻ em", "Hồ bơi", "Pool Lounge",
+    "Phòng thay đồ", "Đường dạo bộ", "Công viên nội khu", "Khu thể thao ngoài trời"
   ];
 </script>
 
-<section class="amenities-section">
-  <div class="container">
-    <div class="header-container">
-      <h2 class="heading-lg">Unmatched <span class="highlight">Utilities</span></h2>
-      <p class="section-desc">Experience a resort lifestyle every single day, with world-class amenities catered to your every whim.</p>
+<section class="relative py-32 bg-bg-secondary overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full bg-accent-light blur-[60px] opacity-60 pointer-events-none z-0"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
+    <div class="text-center max-w-[650px] mx-auto mb-20 gsap-reveal" use:fadeUp={{ y: 30, duration: 1 }}>
+      <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight">Tiện Ích <span class="text-accent">Đỉnh Cao</span></h2>
+      <p class="text-[1.15rem] text-text-secondary mt-4 leading-relaxed">Trải nghiệm phong cách sống nghỉ dưỡng mỗi ngày với các tiện ích đẳng cấp thế giới phục vụ mọi nhu cầu của bạn.</p>
     </div>
 
-    <div class="amenities-grid">
-      {#each amenities as amenity}
-        <div class="amenity-card glass">
-          <div class="icon-orb"></div>
-          <div class="card-content">
-            <h3 class="amenity-title">{amenity.title}</h3>
-            <p class="amenity-desc">{amenity.desc}</p>
-          </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6" use:staggerFadeUp={{ y: 20, stagger: 0.03 }}>
+      {#each amenities as amenity, i}
+        <div class="flex items-center gap-4 bg-white/70 dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 p-4 rounded-xl border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-md hover:border-accent/40 gsap-reveal group">
+          <span class="text-2xl font-black text-accent opacity-30 group-hover:opacity-60 transition-opacity">{(i + 1).toString().padStart(2, '0')}</span>
+          <span class="font-bold text-text-color tracking-tight leading-tight">{amenity}</span>
         </div>
       {/each}
     </div>
   </div>
 </section>
-
-<style>
-  .amenities-section {
-    padding: 8rem 0;
-    background-color: var(--bg-secondary);
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Decorative glowing orb */
-  .amenities-section::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60vw;
-    height: 60vw;
-    background: radial-gradient(circle, var(--accent-light) 0%, transparent 60%);
-    filter: blur(60px);
-    z-index: 0;
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0.6;
-  }
-
-  .container {
-    position: relative;
-    z-index: 1;
-  }
-
-  .header-container {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 5rem;
-  }
-
-  .highlight {
-    color: var(--accent-color);
-  }
-
-  .section-desc {
-    color: var(--text-secondary);
-    font-size: 1.15rem;
-    margin-top: 1rem;
-    line-height: 1.8;
-  }
-
-  .amenities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
-  }
-
-  .amenity-card {
-    padding: 3rem 2.5rem;
-    border-radius: var(--radius-xl);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 1px solid var(--border-color);
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-  }
-
-  .amenity-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.05);
-    border-color: var(--accent-light);
-  }
-
-  .icon-orb {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--bg-color) 100%);
-    margin-bottom: 2rem;
-    position: relative;
-    box-shadow: inset 0 0 20px rgba(255,255,255,0.5);
-  }
-
-  .icon-orb::after {
-    content: '';
-    position: absolute;
-    inset: 15px;
-    border-radius: 50%;
-    background: var(--bg-color);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .amenity-title {
-    font-size: 1.4rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  .amenity-desc {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    font-size: 1.05rem;
-  }
-
-  @media (max-width: 768px) {
-    .amenities-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .amenity-card {
-      padding: 2rem;
-    }
-  }
-</style>

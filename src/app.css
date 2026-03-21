@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
+@import "tailwindcss";
+
+@layer base {
+
 :root {
   /* Colors */
   --bg-color: #ffffff;
@@ -50,12 +54,9 @@
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
+@layer utilities {
 html {
   font-family: var(--font-main);
   scroll-behavior: smooth;
@@ -165,12 +166,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* GSAP initial hidden state to prevent FOUC */
+.gsap-reveal {
+  visibility: hidden;
 }
-
-.animate-fade-in {
-  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
