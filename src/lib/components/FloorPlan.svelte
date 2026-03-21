@@ -1,6 +1,8 @@
-<script>
+<script lang="ts">
   import { fadeUp } from '$lib/actions/gsap';
   import { fade } from 'svelte/transition';
+  
+  let { showCta = false } = $props();
 
   let activeMainTab = $state('floor'); // 'floor' or 'apartment'
   
@@ -130,5 +132,13 @@
         </div>
       {/if}
     </div>
+
+    {#if showCta}
+      <div class="flex justify-center mt-16 gsap-reveal" use:fadeUp={{ y: 20 }}>
+        <a href="/mat-bang" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1">
+          Xem Bản Vẽ Chi Tiết Tầng 02 & 03-30
+        </a>
+      </div>
+    {/if}
   </div>
 </section>

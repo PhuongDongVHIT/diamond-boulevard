@@ -6,6 +6,10 @@
   import FloorPlan from "$lib/components/FloorPlan.svelte";
   import LocationMap from "$lib/components/LocationMap.svelte";
   import AspiraContact from "$lib/components/AspiraContact.svelte";
+  import QuoteSection from "$lib/components/QuoteSection.svelte";
+  import LegalInfo from "$lib/components/LegalInfo.svelte";
+  import PaymentMethods from "$lib/components/PaymentMethods.svelte";
+  import Partners from "$lib/components/Partners.svelte";
 
   const title = "Diamond Boulevard | Dự Án Căn Hộ Cao Cấp Quốc Lộ 13";
   const desc =
@@ -28,9 +32,13 @@
 <main class="relative w-full overflow-x-hidden">
   <div id="section-1"><Carousel /></div>
   <div id="section-2"><ProjectDetail /></div>
-  <div id="section-3"><Amenities /></div>
-  <div id="section-4"><Products /></div>
-  <div id="section-5"><FloorPlan /></div>
-  <div id="section-6"><LocationMap /></div>
+  <div id="quote"><QuoteSection /></div>
+  <div id="section-3"><Amenities showCta={true} /></div>
+  <div id="section-4"><FloorPlan showCta={true} /></div>
+  <div id="payment"><PaymentMethods /></div>
+  <div id="section-5"><LocationMap /></div>
+  <div id="legal"><LegalInfo /></div>
+  <div id="partners"><Partners /></div>
+  <div id="section-6"><Products /></div>
   <AspiraContact />
 </main>
