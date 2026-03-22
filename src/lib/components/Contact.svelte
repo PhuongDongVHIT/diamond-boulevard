@@ -40,15 +40,15 @@
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           name,
           phone,
           email,
           apartmentType,
-          message
-        })
+          message,
+        }),
       });
 
       const data = await res.json();
@@ -64,7 +64,6 @@
       email = "";
       apartmentType = "";
       message = "";
-
     } catch (err: any) {
       serverError = err.message;
       console.error(err);
@@ -76,11 +75,16 @@
 
 <section class="relative pt-24 min-h-[800px] bg-center bg-cover bg-no-repeat">
   <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-    <div class="flex flex-col lg:flex-row rounded-[1.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)] mb-16">
-
+    <div
+      class="flex flex-col lg:flex-row rounded-[1.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)] mb-16"
+    >
       <!-- Left -->
-      <div class="flex-1 bg-accent text-black py-16 px-8 md:px-12 flex flex-col">
-        <h2 class="text-[2.5rem] md:text-[3rem] font-extrabold leading-[1.1] mb-12 uppercase">
+      <div
+        class="flex-1 bg-accent text-black py-16 px-8 md:px-12 flex flex-col"
+      >
+        <h2
+          class="text-[2.5rem] md:text-[3rem] font-extrabold leading-[1.1] mb-12 uppercase"
+        >
           Diamond Boulevard
         </h2>
 
@@ -117,7 +121,6 @@
         </h3>
 
         <form on:submit|preventDefault={submitForm} class="flex flex-col gap-5">
-
           <div>
             <input
               bind:value={name}
@@ -179,10 +182,8 @@
           {#if serverError}
             <p class="text-red-500 text-center font-medium">{serverError}</p>
           {/if}
-
         </form>
       </div>
-
     </div>
   </div>
 </section>

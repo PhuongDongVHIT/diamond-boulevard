@@ -8,7 +8,23 @@
   import LegalGallery from "$lib/components/LegalGallery.svelte";
   const title = "Diamond Boulevard | Dự Án Căn Hộ Cao Cấp Quốc Lộ 13";
   const desc =
-    "Sống tại trung tâm giao điểm phồn hoa. Diamond Boulevard mang đến  căn hộ cao cấp chuẩn chuyên gia với 30+ tiện ích nội khu đỉnh cao.";
+    "Sống tại trung tâm giao điểm phồn hoa. Diamond Boulevard mang đến căn hộ cao cấp chuẩn chuyên gia với 30+ tiện ích nội khu đỉnh cao.";
+    
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ApartmentComplex",
+    "name": "Diamond Boulevard",
+    "description": desc,
+    "url": "https://diamondboulevard.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thuận An",
+      "addressRegion": "Bình Dương",
+      "streetAddress": "Quốc Lộ 13",
+      "addressCountry": "VN"
+    },
+    "featureList": "Hồ bơi, Công viên, Phòng GYM, Trung tâm thương mại"
+  };
 </script>
 
 <svelte:head>
@@ -22,6 +38,7 @@
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={desc} />
   <link rel="canonical" href="https://diamondboulevard.example.com/" />
+  {@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
 </svelte:head>
 
 <main class="relative w-full overflow-x-hidden">
