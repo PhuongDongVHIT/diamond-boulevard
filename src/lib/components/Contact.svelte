@@ -73,7 +73,9 @@
   }
 </script>
 
-<section class="relative py-16 md:py-24 lg:py-32 min-h-[800px] bg-center bg-cover bg-no-repeat">
+<section
+  class="relative py-16 md:py-24 lg:py-32 min-h-[800px] bg-center bg-cover bg-no-repeat"
+>
   <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
     <div
       class="flex flex-col lg:flex-row rounded-[1.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)] mb-16"
@@ -107,10 +109,12 @@
 
         <div class="mt-12 w-full h-[300px] rounded-lg overflow-hidden">
           <iframe
-            title="Bản đồ vị trí"
-            src="https://www.google.com/maps/embed?pb=!1m18..."
-            class="w-full h-full border-0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d288.9728176971004!2d106.70733531778889!3d10.944914896610715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d700637465ef%3A0x3a00fc4fa4ebcee5!2zQ2h1bmcgQ8awIFTDom4gYW4!5e0!3m2!1svi!2s!4v1774182016079!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border:0;"
             loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
@@ -121,7 +125,13 @@
           LIÊN HỆ TƯ VẤN
         </h3>
 
-        <form onsubmit={(e) => { e.preventDefault(); submitForm(); }} class="flex flex-col gap-5">
+        <form
+          onsubmit={(e) => {
+            e.preventDefault();
+            submitForm();
+          }}
+          class="flex flex-col gap-5"
+        >
           <div>
             <input
               bind:value={name}
