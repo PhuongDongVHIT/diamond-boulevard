@@ -41,7 +41,7 @@
   {@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
 </svelte:head>
 
-<main class="relative w-full overflow-x-hidden">
+<main class="relative w-full overflow-x-hidden pt-24">
   <div id="section-1"><Carousel /></div>
   <div id="section-2"><ProjectDetail /></div>
   <div id="section-5"><LocationMap /></div>
