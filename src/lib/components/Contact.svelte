@@ -1,14 +1,14 @@
 <script lang="ts">
-  let name = "";
-  let phone = "";
-  let email = "";
-  let apartmentType = "";
-  let message = "";
+  let name = $state("");
+  let phone = $state("");
+  let email = $state("");
+  let apartmentType = $state("");
+  let message = $state("");
 
-  let errors: Record<string, string> = {};
-  let loading = false;
-  let success = "";
-  let serverError = "";
+  let errors: Record<string, string> = $state({});
+  let loading = $state(false);
+  let success = $state("");
+  let serverError = $state("");
 
   function validate() {
     errors = {};
