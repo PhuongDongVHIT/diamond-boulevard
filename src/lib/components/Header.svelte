@@ -31,10 +31,11 @@
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-10">
-      <a href="/" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Tổng Quan</a>
-      <a href="/kham-pha" class="text-[0.9rem] font-medium text-accent hover:text-accent-hover transition-colors tracking-wide">Khám Phá</a>
+      <a href="/tong-quan" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Tổng Quan</a>
       <a href="/mat-bang" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Mặt Bằng</a>
       <a href="/tien-ich" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Tiện Ích</a>
+      <a href="/tin-tuc" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Tin tức</a>
+      <a href="/thu-vien" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Thư viện</a>
       <a href="/#contact" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Liên Hệ</a>
     </nav>
 

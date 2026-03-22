@@ -32,7 +32,7 @@
         <div>
           <h3 class="text-lg font-bold text-text-color mb-6">Pháp lý</h3>
           <ul class="space-y-3">
-            <li><a href="#privacy" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Chính sách bảo mật</a></li>
+            <li><a href="/chinh-sach-bao-mat" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Chính sách bảo mật</a></li>
             <li><a href="#terms" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Điều khoản dịch vụ</a></li>
             <li><a href="#cookies" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Chính sách Cookie</a></li>
           </ul>

@@ -7,18 +7,18 @@
   let activeMainTab = $state('floor'); // 'floor' or 'apartment'
   
   const floorPlans = [
-    { id: 'tongthe', name: 'Mặt Bằng Tổng Thể', image: '/images/mb-tong-the.jpg' },
-    { id: 'tang2', name: 'Mặt Bằng Tầng 02', image: '/images/mb-tang-2.jpg' },
-    { id: 'tang3-30', name: 'Mặt Bằng Tầng 03-30', image: '/images/mb-tang-3-30.jpg' },
+    // { id: 'tongthe', name: 'Mặt Bằng Tiện ích', image: '/images/khong-chu-mat-bang-tang-tien-ich-diamond-boulevard.webp' },
+    { id: 'tang2', name: 'Mặt Bằng Tầng 02', image: '/images/mat-bang-tang-2-diamond-boulevard.webp' },
+    { id: 'tang3-30', name: 'Mặt Bằng Tầng 03-30', image: '/images/mat-bang-tang-3-30-diamond-boulevard.webp' },
   ];
   let activeFloor = $state(floorPlans[0].id);
   let currentFloor = $derived(floorPlans.find(p => p.id === activeFloor) || floorPlans[0]);
 
   const apartments = [
-    { id: 'studio', name: 'Studio (CH-11)', timtuong: '35.48 m²', thongthuy: '30.79 m²', image: '/images/ch-11.jpg' },
-    { id: '2pn1wc', name: 'Căn hộ 2PN - 1WC', timtuong: '50.10 m²', thongthuy: '43.90 m²', image: '/images/ch-2pn-1wc.jpg' },
-    { id: '2pn2wc', name: 'Căn hộ 2PN - 2WC (CH-01)', timtuong: '66.11 m²', thongthuy: '59.41 m²', image: '/images/ch-01.jpg' },
-    { id: '3pn', name: 'Căn hộ 3PN', timtuong: '84.14 m²', thongthuy: '76.12 m²', image: '/images/ch-3pn.jpg' },
+    { id: 'studio', name: 'Studio (CH-11)', timtuong: '35.48 m²', thongthuy: '30.79 m²', image: '/images/can-ho-diamond-boulevard-can-ho-11.webp' },
+    { id: '2pn1wc', name: 'Căn hộ 2PN - 1WC', timtuong: '50.10 m²', thongthuy: '43.90 m²', image: '/images/can-ho-diamond-boulevard-can-ho-12.webp' },
+    { id: '2pn2wc', name: 'Căn hộ 2PN - 2WC (CH-01)', timtuong: '66.11 m²', thongthuy: '59.41 m²', image: '/images/can-ho-diamond-boulevard-can-ho-01.webp' },
+    { id: '3pn', name: 'Căn hộ 3PN', timtuong: '84.14 m²', thongthuy: '76.12 m²', image: '/images/can-ho-diamond-boulevard-can-ho-18.webp' },
   ];
   let activeApartment = $state(apartments[0].id);
   let currentApartment = $derived(apartments.find(p => p.id === activeApartment) || apartments[0]);
@@ -34,7 +34,7 @@
   }
 </script>
 
-<section class="py-32 bg-bg-color relative">
+<section class="py-16 bg-bg-color relative">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <div class="text-center mb-12 gsap-reveal" use:fadeUp={{ y: 30 }}>
       <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight">Mặt Bằng <span class="text-accent">Dự Án</span></h2>
@@ -43,13 +43,13 @@
 
     <div class="flex justify-center gap-4 mb-10 gsap-reveal" use:fadeUp={{ y: 20, delay: 0.1 }}>
       <button 
-        class="px-8 py-3 rounded-full font-bold transition-all shadow-sm {activeMainTab === 'floor' ? 'bg-accent text-white shadow-[0_4px_15px_rgba(239,101,34,0.3)]' : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}" 
+        class="px-8 py-3 rounded-full font-bold transition-all shadow-sm {activeMainTab === 'floor' ? 'bg-accent text-black shadow-[0_4px_15px_rgba(239,101,34,0.3)]' : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}" 
         onclick={() => activeMainTab = 'floor'}
       >
         Mặt Bằng Tầng
       </button>
       <button 
-        class="px-8 py-3 rounded-full font-bold transition-all shadow-sm {activeMainTab === 'apartment' ? 'bg-accent text-white shadow-[0_4px_15px_rgba(239,101,34,0.3)]' : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}" 
+        class="px-8 py-3 rounded-full font-bold transition-all shadow-sm {activeMainTab === 'apartment' ? 'bg-accent text-black shadow-[0_4px_15px_rgba(239,101,34,0.3)]' : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}" 
         onclick={() => activeMainTab = 'apartment'}
       >
         Thiết Kế Căn Hộ
@@ -73,7 +73,7 @@
           {#key activeFloor}
             <div class="w-full flex justify-center items-center" in:fade={{duration: 300, delay: 50}}>
               <!-- svelte-ignore a11y_img_redundant_alt -->
-              <img src={currentFloor.image} alt={currentFloor.name} class="max-w-full max-h-[70vh] object-contain rounded-lg" onerror={handleImageError} />
+              <img src={currentFloor.image} alt={currentFloor.name} class="max-w-full max-h-[80vh] object-contain rounded-lg" onerror={handleImageError} />
               <!-- Placeholder if image not found -->
               <div class="hidden flex-col items-center justify-center p-20 text-text-secondary border-2 border-dashed border-border-color rounded-xl w-full max-w-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
@@ -135,7 +135,7 @@
 
     {#if showCta}
       <div class="flex justify-center mt-16 gsap-reveal" use:fadeUp={{ y: 20 }}>
-        <a href="/mat-bang" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1">
+        <a href="/mat-bang" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-black rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1">
           Xem Bản Vẽ Chi Tiết Tầng 02 & 03-30
         </a>
       </div>

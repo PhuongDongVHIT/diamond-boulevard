@@ -1,17 +1,12 @@
-<script>
-  import { fadeUp } from '$lib/actions/gsap';
-  // AspiraContact.svelte
-</script>
-
-<section class="relative pt-24 min-h-[800px] bg-[url('/images/placeholder.jpg')] bg-center bg-cover bg-no-repeat bg-bg-color">
-  <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+<section class="relative pt-24 min-h-[800px] bg-center bg-cover bg-no-repeat">
+  <!-- <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div> -->
   
   <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-    <div class="flex flex-col lg:flex-row rounded-[1.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)] mb-16 gsap-reveal" use:fadeUp={{ y: 50, duration: 1.2 }}>
+    <div class="flex flex-col lg:flex-row rounded-[1.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)] mb-16">
       
       <!-- Left Side (Orange) -->
-      <div class="flex-1 bg-accent text-white py-16 px-8 md:px-12 flex flex-col">
-        <h2 class="text-[2.5rem] md:text-[3rem] font-extrabold leading-[1.1] mb-12 uppercase">DỰ ÁN<br>THE ASPIRA</h2>
+      <div class="flex-1 bg-accent text-black py-16 px-8 md:px-12 flex flex-col">
+        <h2 class="text-[2.5rem] md:text-[3rem] font-extrabold leading-[1.1] mb-12 uppercase">Diamond Boulevard</h2>
         
         <div class="flex flex-col gap-6 mb-auto">
           <div class="flex items-start gap-4 text-[1.05rem] font-medium">
@@ -37,9 +32,6 @@
 
       <!-- Right Side (Glass Form) -->
       <div class="flex-[1.2] py-16 px-8 md:px-12 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl">
-        <h2 class="text-[2rem] md:text-[2.5rem] font-extrabold text-text-color mb-2">Đăng ký tư vấn</h2>
-        <p class="text-base text-text-secondary mb-8 max-w-[400px] leading-relaxed">Hãy để lại lời nhắn để đội ngũ của chúng tôi tư vấn chi tiết và đồng hành cùng bạn.</p>
-
         <h3 class="text-2xl font-extrabold text-center text-text-color mb-8 uppercase">LIÊN HỆ TƯ VẤN</h3>
 
         <form class="flex flex-col gap-5">
@@ -53,20 +45,6 @@
         </form>
       </div>
       
-    </div>
-  </div>
-  
-  <div class="bg-accent text-white py-6 relative z-10 w-full mt-auto">
-    <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col lg:flex-row justify-between items-center text-[0.9rem] font-medium gap-4 lg:gap-0 text-center lg:text-left">
-      <div>
-        <strong>DIAMOND BOULEVARD</strong> 2026 Diamond Boulevard. Bản quyền đã được bảo hộ.
-      </div>
-      <div>
-        Địa chỉ: Đường Nguyễn Thị Minh Khai/2, Phường Tân Đông Hiệp, TP Hồ Chí Minh
-      </div>
-      <div>
-        Email: info@diamondboulevard.vn
-      </div>
     </div>
   </div>
 </section>

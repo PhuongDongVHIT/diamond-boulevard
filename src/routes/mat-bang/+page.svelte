@@ -68,9 +68,9 @@
         
         <div class="md:w-2/3 bg-slate-50 dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-xl">
            <!-- svelte-ignore a11y_img_redundant_alt -->
-           <img src="/images/mb-tang-2.jpg" alt="Mặt Bằng Tầng 02 - Diamond Boulevard" class="w-full h-auto" onerror={handleImageError} />
+           <img src="/images/mat-bang-tang-2-diamond-boulevard.webp" alt="Mặt Bằng Tầng 02 - Diamond Boulevard" class="w-full h-auto" onerror={handleImageError} />
            <div class="hidden flex-col items-center justify-center p-12 text-slate-400 text-center w-full min-h-[300px]">
-             Vui lòng cập nhật ảnh <code class="text-accent">mb-tang-2.jpg</code>
+             Vui lòng cập nhật ảnh <code class="text-accent">mat-bang-tang-2-diamond-boulevard.webp</code>
            </div>
         </div>
       </div>
@@ -89,9 +89,9 @@
         
         <div class="md:w-2/3 bg-slate-50 dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-xl">
            <!-- svelte-ignore a11y_img_redundant_alt -->
-           <img src="/images/mb-tang-3-30.jpg" alt="Mặt Bằng Tầng 03 đến 30 - Diamond Boulevard" class="w-full h-auto" onerror={handleImageError} />
+           <img src="/images/mat-bang-tang-3-30-diamond-boulevard.webp" alt="Mặt Bằng Tầng 03 đến 30 - Diamond Boulevard" class="w-full h-auto" onerror={handleImageError} />
            <div class="hidden flex-col items-center justify-center p-12 text-slate-400 text-center w-full min-h-[300px]">
-             Vui lòng cập nhật ảnh <code class="text-accent">mb-tang-3-30.jpg</code>
+             Vui lòng cập nhật ảnh <code class="text-accent">mat-bang-tang-3-30-diamond-boulevard.webp</code>
            </div>
         </div>
       </div>
