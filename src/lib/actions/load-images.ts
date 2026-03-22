@@ -1,8 +1,8 @@
-const modules = import.meta.glob('/static/images/*.webp', { eager: true });
+const modules = import.meta.glob('/static/images/*.webp', { eager: true, query: '?url', import: 'default' });
 
-export const images = Object.entries(modules).map(([path]) => {
+export const images = Object.entries(modules).map(([path, url]) => {
   return {
-    src: path.replace('/static', ''),
+    src: typeof url === 'string' ? url : path.replace('/static', ''),
     title: path.split('/').pop()?.replace('.webp', '') || '',
     category: path.includes('mat-bang')
       ? 'mat-bang'
@@ -14,11 +14,11 @@ export const images = Object.entries(modules).map(([path]) => {
   };
 });
 
-const modulesLaw = import.meta.glob('/static/laws/*.webp', { eager: true });
+const modulesLaw = import.meta.glob('/static/laws/*.webp', { eager: true, query: '?url', import: 'default' });
 
-export const imageLaws = Object.entries(modulesLaw).map(([path]) => {
+export const imageLaws = Object.entries(modulesLaw).map(([path, url]) => {
   return {
-    src: path.replace('/static', ''),
+    src: typeof url === 'string' ? url : path.replace('/static', ''),
     title: path.split('/').pop()?.replace('.webp', '') || '',
   };
 });
