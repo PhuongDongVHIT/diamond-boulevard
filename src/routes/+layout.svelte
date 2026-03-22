@@ -12,5 +12,5 @@
 <main>
   {@render children()}
 </main>
-<Contact />
+<!-- <Contact /> -->
 <Footer />
