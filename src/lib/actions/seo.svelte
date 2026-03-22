@@ -1,22 +1,35 @@
 <script lang="ts">
-  // Định nghĩa kiểu dữ liệu cho các props (TypeScript)
-  export let title: string;
-  export let desc: string;
-  export let path: string = ''; // Đường dẫn tĩnh của trang hiện tại (VD: /gioi-thieu)
-  export let image: string = 'https://diamondboulevard.xyz/logo.png';
-  export let isArticle: boolean = false;
-  export let author: string = 'Diamond Boulevard';
-  export let jsonLd: object | null = null; // Có thể truyền schema tùy chỉnh từ ngoài vào
+  // 1. Định nghĩa kiểu dữ liệu (Interface) cho Props
+  interface Props {
+    title: string;
+    desc: string;
+    path?: string;
+    image?: string;
+    isArticle?: boolean;
+    author?: string;
+    jsonLd?: object | null;
+  }
 
-  const siteUrl = 'https://diamondboulevard.xyz';
-  const fullUrl = `${siteUrl}${path}`;
+  // 2. Nhận props bằng $props() và gán giá trị mặc định (Fallback)
+  let {
+    title,
+    desc,
+    path = '',
+    image = 'https://diamondboulevard.example.com/default-og-image.jpg',
+    isArticle = false,
+    author = 'Diamond Boulevard',
+    jsonLd = null
+  }: Props = $props();
+
+  const siteUrl = 'https://diamondboulevard.example.com';
   const siteName = 'Diamond Boulevard';
   
-  // Nối tên thương hiệu vào title để tăng độ nhận diện (Branding)
-  const fullTitle = `${title} | ${siteName}`;
+  // 3. Sử dụng $derived() cho các biến phụ thuộc vào props để chúng tự cập nhật khi props đổi
+  let fullUrl = $derived(`${siteUrl}${path}`);
+  let fullTitle = $derived(`${title} | ${siteName}`);
 
-  // Tự động tạo JSON-LD tối ưu cho AIO nếu không được truyền vào
-  const defaultJsonLd = {
+  // Tự động tạo JSON-LD tối ưu
+  let defaultJsonLd = $derived({
     "@context": "https://schema.org",
     "@type": isArticle ? "Article" : "WebSite",
     "name": siteName,
@@ -36,9 +49,9 @@
         "url": `${siteUrl}/logo.png`
       }
     }
-  };
+  });
 
-  const finalJsonLd = jsonLd || defaultJsonLd;
+  let finalJsonLd = $derived(jsonLd || defaultJsonLd);
 </script>
 
 <svelte:head>
