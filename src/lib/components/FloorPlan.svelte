@@ -269,16 +269,5 @@
         </div>
       {/if}
     </div>
-
-    {#if showCta}
-      <div class="flex justify-center mt-16">
-        <a
-          href="/mat-bang"
-          class="btn btn-primary text-sm md:text-base px-6 md:px-10 lg:px-12 py-3 md:py-4"
-        >
-          Xem Bản Vẽ Chi Tiết
-        </a>
-      </div>
-    {/if}
   </div>
 </section>

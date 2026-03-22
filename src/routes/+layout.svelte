@@ -9,7 +9,7 @@
 
 <Header />
 
-<main>
+<main class="bg-[#0a2d4f]">
   {@render children()}
 </main>
 <Contact />

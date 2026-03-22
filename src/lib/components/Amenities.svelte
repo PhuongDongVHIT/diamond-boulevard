@@ -57,16 +57,5 @@
         </div>
       {/each}
     </div>
-
-    {#if showCta}
-      <div class="flex justify-center mt-12">
-        <a
-          href="/tien-ich"
-          class="btn btn-primary text-sm md:text-base px-6 md:px-10 lg:px-12 py-3 md:py-4"
-        >
-          Khám Phá Chi Tiết Tiện Ích
-        </a>
-      </div>
-    {/if}
   </div>
 </section>
