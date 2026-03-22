@@ -1,11 +1,28 @@
 export async function load({ fetch }: any) {
-  const res = await fetch(
-    'https://batdongsan.atservice.vn/wp/v2/posts?_embed'
-  );
+  try {
+    const res = await fetch(
+      'https://batdongsan.atservice.vn/wp/v2/posts?_embed',
+      {
+        headers: {
+          Accept: 'application/json'
+        }
+      }
+    );
 
-  const posts = await res.json();
+    if (!res.ok) {
+      throw new Error('API failed');
+    }
 
-  return {
-    posts
-  };
+    const posts = await res.json();
+
+    return {
+      posts
+    };
+  } catch (err) {
+    console.error(err);
+
+    return {
+      posts: []
+    };
+  }
 }
