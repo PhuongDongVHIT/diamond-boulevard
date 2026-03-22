@@ -26,7 +26,7 @@
 </svelte:head>
 
 <main class="relative w-full overflow-x-hidden">
-  <div id="section-1"><Carousel /></div>
+  <!-- <div id="section-1"><Carousel /></div> -->
   <!-- <div id="section-2"><ProjectDetail /></div>
   <div id="section-5"><LocationMap /></div>
   <div id="section-4"><FloorPlan showCta={true} /></div>
