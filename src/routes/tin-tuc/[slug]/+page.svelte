@@ -1,10 +1,10 @@
 <script lang="ts">
-  export let data;
-  const post = data.post;
+const { data } = $props();
+const post = data.post;
 </script>
 
 <svelte:head>
-  <title>{@html post.title.rendered}</title>
+  <title>{post.title.rendered}</title>
   <meta
     name="description"
     content={post.excerpt.rendered.replace(/<[^>]*>/g, '')}

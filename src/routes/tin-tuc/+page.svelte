@@ -1,11 +1,7 @@
 <script lang="ts">
-  export let data;
+  const { data } = $props();
   const posts = data.posts;
 </script>
-
-<svelte:head>
-  <title>Tin tức bất động sản</title>
-</svelte:head>
 
 <section class="py-20 bg-slate-50 min-h-screen">
   <div class="max-w-7xl mx-auto px-6">
@@ -28,7 +24,6 @@
             />
 
             <div class="p-6">
-
               <h2 class="text-xl font-bold mb-3 line-clamp-2">
                 {@html post.title.rendered}
               </h2>
@@ -40,8 +35,8 @@
               <span class="text-orange-500 font-semibold">
                 Xem chi tiết →
               </span>
-
             </div>
+
           </article>
         </a>
       {/each}
