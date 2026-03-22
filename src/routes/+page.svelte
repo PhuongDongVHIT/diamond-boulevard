@@ -1,6 +1,6 @@
 <script>
   // import Carousel from "$lib/components/Carousel.svelte";
-  // import ProjectDetail from "$lib/components/ProjectDetail.svelte";
+  import ProjectDetail from "$lib/components/ProjectDetail.svelte";
   // import Amenities from "$lib/components/Amenities.svelte";
   // import FloorPlan from "$lib/components/FloorPlan.svelte";
   // import LocationMap from "$lib/components/LocationMap.svelte";
@@ -27,8 +27,8 @@
 
 <main class="relative w-full overflow-x-hidden">
   <!-- <div id="section-1"><Carousel /></div> -->
-  <!-- <div id="section-2"><ProjectDetail /></div>
-  <div id="section-5"><LocationMap /></div>
+  <div id="section-2"><ProjectDetail /></div>
+  <!-- <div id="section-5"><LocationMap /></div>
   <div id="section-4"><FloorPlan showCta={true} /></div>
   <div id="section-3"><Amenities showCta={true} /></div>
   <div id="payment"><PaymentMethods /></div>
