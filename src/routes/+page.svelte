@@ -1,12 +1,12 @@
 <script>
   import Carousel from "$lib/components/Carousel.svelte";
-  import ProjectDetail from "$lib/components/ProjectDetail.svelte";
-  import Amenities from "$lib/components/Amenities.svelte";
-  import FloorPlan from "$lib/components/FloorPlan.svelte";
-  import LocationMap from "$lib/components/LocationMap.svelte";
-  import PaymentMethods from "$lib/components/PaymentMethods.svelte";
-    import Contact from "$lib/components/Contact.svelte";
-    import LegalGallery from "$lib/components/LegalGallery.svelte";
+  // import ProjectDetail from "$lib/components/ProjectDetail.svelte";
+  // import Amenities from "$lib/components/Amenities.svelte";
+  // import FloorPlan from "$lib/components/FloorPlan.svelte";
+  // import LocationMap from "$lib/components/LocationMap.svelte";
+  // import PaymentMethods from "$lib/components/PaymentMethods.svelte";
+  //   import Contact from "$lib/components/Contact.svelte";
+  //   import LegalGallery from "$lib/components/LegalGallery.svelte";
   const title = "Diamond Boulevard | Dự Án Căn Hộ Cao Cấp Quốc Lộ 13";
   const desc =
     "Sống tại trung tâm giao điểm phồn hoa. Diamond Boulevard mang đến  căn hộ cao cấp chuẩn chuyên gia với 30+ tiện ích nội khu đỉnh cao.";
@@ -27,10 +27,10 @@
 
 <main class="relative w-full overflow-x-hidden">
   <div id="section-1"><Carousel /></div>
-  <div id="section-2"><ProjectDetail /></div>
+  <!-- <div id="section-2"><ProjectDetail /></div>
   <div id="section-5"><LocationMap /></div>
   <div id="section-4"><FloorPlan showCta={true} /></div>
   <div id="section-3"><Amenities showCta={true} /></div>
   <div id="payment"><PaymentMethods /></div>
-  <div id="payment"><LegalGallery /></div>
+  <div id="payment"><LegalGallery /></div> -->
 </main>
