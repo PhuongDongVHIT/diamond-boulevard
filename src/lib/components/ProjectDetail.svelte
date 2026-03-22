@@ -32,7 +32,7 @@
   <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
     <!-- Left Content -->
-    <div class="gsap-reveal" use:fadeUp={{ x: -40, y: 0, duration: 1 }}>
+    <div>
       <h2 class="text-4xl md:text-[3.2rem] font-extrabold tracking-tight leading-tight">
         Tổng Quan <span class="text-accent">Diamond Boulevard</span>
       </h2>

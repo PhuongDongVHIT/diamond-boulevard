@@ -168,8 +168,5 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
-/* GSAP initial hidden state to prevent FOUC */
-.gsap-reveal {
-  visibility: hidden;
-}
+
 }

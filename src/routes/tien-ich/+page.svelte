@@ -1,6 +1,6 @@
 <script lang="ts">
   import AmenitiesList from '$lib/components/Amenities.svelte';
-  import { fadeUp } from '$lib/actions/gsap';
+  
 
   function handleImageError(e: Event) {
     const target = e.currentTarget as HTMLElement;

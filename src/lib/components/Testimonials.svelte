@@ -1,5 +1,5 @@
 <script>
-  import { fadeUp, staggerFadeUp } from '$lib/actions/gsap';
+  
   const testimonials = [
     {
       id: 1,
@@ -27,14 +27,14 @@
 
 <section class="py-32 bg-bg-secondary relative before:absolute before:top-0 before:left-0 before:right-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-border-color before:to-transparent after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-border-color after:to-transparent">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
-    <div class="text-center mb-20 gsap-reveal" use:fadeUp={{ y: 30, duration: 1 }}>
+    <div class="text-center mb-20 " >
       <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight">Câu Chuyện <span class="text-accent">Khách Hàng</span></h2>
       <p class="text-[1.15rem] text-text-secondary mt-4">Lắng nghe từ những khách hàng sở hữu tiêu chuẩn khắt khe nhất thế giới.</p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12" use:staggerFadeUp={{ y: 40, stagger: 0.15 }}>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12" >
       {#each testimonials as item}
-        <div class="bg-bg-color p-10 md:p-12 rounded-[1.5rem] shadow-[0_4px_30px_rgba(0,0,0,0.05)] relative border border-border-color transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,0,0,0.06)] gsap-reveal">
+        <div class="bg-bg-color p-10 md:p-12 rounded-[1.5rem] shadow-[0_4px_30px_rgba(0,0,0,0.05)] relative border border-border-color transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,0,0,0.06)] ">
           <div class="absolute -top-5 left-8 md:left-12 text-[5rem] leading-none font-serif text-accent-light font-bold select-none">"</div>
           <div class="text-yellow-400 mb-6 text-xl tracking-[2px] flex">
             {#each Array(item.rating) as _}

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { fadeUp } from '$lib/actions/gsap';
+  
 
   let { items = [
     {
@@ -66,7 +66,7 @@
   });
 </script>
 
-<div class="relative w-screen h-screen overflow-hidden bg-bg-color gsap-reveal" use:fadeUp={{ y: 50, duration: 1 }}>
+<div class="relative w-screen h-screen overflow-hidden bg-bg-color " >
   {#each items as item, i}
     <div 
       class="absolute inset-0 w-screen h-screen bg-cover bg-center flex items-end justify-center transition-opacity duration-1000 ease-in-out {i === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}" 

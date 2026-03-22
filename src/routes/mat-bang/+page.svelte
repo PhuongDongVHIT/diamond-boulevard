@@ -1,6 +1,6 @@
 <script lang="ts">
   import FloorPlanComponent from '$lib/components/FloorPlan.svelte';
-  import { fadeUp } from '$lib/actions/gsap';
+  
 
   function handleImageError(e: Event) {
     const target = e.currentTarget as HTMLElement;
@@ -50,7 +50,7 @@
   <div class="max-w-[1400px] mx-auto px-6 md:px-8">
     
     <!-- Floor 2 -->
-    <div class="mb-32 gsap-reveal" use:fadeUp={{ y: 50 }}>
+    <div class="mb-32 " >
       <div class="flex flex-col md:flex-row gap-12 items-center">
         <div class="md:w-1/3">
           <h2 class="text-4xl font-extrabold text-text-color uppercase tracking-tight mb-6 border-l-4 border-accent pl-4">Mặt Bằng<br>Tầng 02</h2>
@@ -77,7 +77,7 @@
     </div>
 
     <!-- Floor 3-30 -->
-    <div class="gsap-reveal" use:fadeUp={{ y: 50 }}>
+    <div class="" >
       <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
         <div class="md:w-1/3">
           <h2 class="text-4xl font-extrabold text-text-color uppercase tracking-tight mb-6 border-l-4 border-accent pl-4">Mặt Bằng<br>Tầng 03 - 30</h2>
@@ -105,7 +105,7 @@
 
 <!-- SEO Content Block for Conversion -->
 <section class="py-24 bg-bg-secondary border-t border-border-color">
-  <div class="max-w-4xl mx-auto px-6 md:px-8 text-center gsap-reveal" use:fadeUp={{ y: 30 }}>
+  <div class="max-w-4xl mx-auto px-6 md:px-8 text-center " >
     <h2 class="text-3xl font-bold text-text-color mb-6">Liên Hệ Để Nhận Bảng Giá Chi Tiết</h2>
     <p class="text-lg text-text-secondary leading-relaxed mb-10">
       Mỗi thiết kế căn hộ mở ra một giải pháp không gian hoàn mỹ cho gia đình bạn. Hãy đăng ký ngay để nhận file bản vẽ CAD, ảnh 3D phân giải cao và bảng cập nhật thiết kế MỚI NHẤT từ Chủ đầu tư Tecco.

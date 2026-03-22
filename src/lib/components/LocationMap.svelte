@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fadeUp, staggerFadeUp } from '$lib/actions/gsap';
+  
 
   const highlights = [
     {
@@ -43,7 +43,7 @@
     
 
     <!-- Right Image -->
-    <div class="h-[450px] lg:h-[600px] gsap-reveal relative" use:fadeUp={{ x: 40, y: 0, delay: 0.2 }}>
+    <div class="h-[450px] lg:h-[600px]  relative" >
       <div class="w-full h-full rounded-[1.5rem] relative overflow-hidden p-3 md:p-4 border border-border-color bg-white/70 dark:bg-slate-900/75 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.05)]">
         <div class="w-full h-full rounded-xl overflow-hidden border border-border-color">
           <img
@@ -67,7 +67,7 @@
     </div>
     
     <!-- Left Content -->
-    <div class="gsap-reveal" use:fadeUp={{ x: -40, y: 0 }}>
+    <div class="" >
       <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight leading-tight">
         Toạc Độ Đắc Địa <br />
         <span class="text-accent">Tâm Điểm Giao Thương</span>
@@ -78,9 +78,9 @@
         nhịp sống và giá trị đầu tư hội tụ, kiến tạo sức bật bền vững cho tương lai.
       </p>
 
-      <div class="flex flex-col gap-5 pt-4" use:staggerFadeUp={{ x: -30, y: 0, stagger: 0.1 }}>
+      <div class="flex flex-col gap-5 pt-4" >
         {#each highlights as item}
-          <div class="flex gap-4 py-4 border-b border-border-color gsap-reveal">
+          <div class="flex gap-4 py-4 border-b border-border-color ">
             <div class="w-[52px] h-[52px] rounded-full bg-bg-secondary border border-border-color flex items-center justify-center text-2xl shrink-0">
               {item.icon}
             </div>

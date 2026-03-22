@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fadeUp, staggerFadeUp } from "$lib/actions/gsap";
+  
   let { showCta = false } = $props();
   const amenities = [
     "Cổng chào",
@@ -33,8 +33,8 @@
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
 
     <div
-      class="relative w-full h-full flex flex-col justify-center min-h-[400px] lg:min-h-[600px] gsap-reveal"
-      use:fadeUp={{ x: 40, y: 0, duration: 1, delay: 0.2 }}
+      class="relative w-full h-full flex flex-col justify-center min-h-[400px] lg:min-h-[600px] "
+      
     >
       <img
         src="/images/khong-chu-mat-bang-tang-tien-ich-diamond-boulevard.webp"
@@ -45,11 +45,11 @@
 
     <div
       class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-16"
-      use:staggerFadeUp={{ y: 20, stagger: 0.03 }}
+      
     >
       {#each amenities as amenity, i}
         <div
-          class="flex items-center gap-4 bg-white/70 dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 p-4 rounded-xl border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-md hover:border-accent/40 gsap-reveal group"
+          class="flex items-center gap-4 bg-white/70 dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 p-4 rounded-xl border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-md hover:border-accent/40  group"
         >
           <span
             class="text-2xl font-black text-accent opacity-30 group-hover:opacity-60 transition-opacity"
@@ -63,7 +63,7 @@
     </div>
 
     {#if showCta}
-      <div class="flex justify-center mt-12 gsap-reveal" use:fadeUp={{ y: 20 }}>
+      <div class="flex justify-center mt-12 " >
         <a
           href="/tien-ich"
           class="inline-flex items-center justify-center px-10 py-4 bg-accent text-blue-800 rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1"

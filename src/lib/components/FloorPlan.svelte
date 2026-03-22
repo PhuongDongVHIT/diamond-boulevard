@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fadeUp } from '$lib/actions/gsap';
+  
   import { fade } from 'svelte/transition';
   
   let { showCta = false } = $props();
@@ -23,12 +23,12 @@
   let activeApartment = $state(apartments[0].id);
   let currentApartment = $derived(apartments.find(p => p.id === activeApartment) || apartments[0]);
 
-  function handleImageError(e) {
-    const target = e.currentTarget;
+  function handleImageError(e: Event) {
+    const target = e.currentTarget as HTMLImageElement;
     if (target) {
       target.style.display = 'none';
       if (target.nextElementSibling) {
-        target.nextElementSibling.style.display = 'flex';
+        (target.nextElementSibling as HTMLElement).style.display = 'flex';
       }
     }
   }
@@ -36,12 +36,12 @@
 
 <section class="py-16 bg-bg-color relative">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
-    <div class="text-center mb-12 gsap-reveal" use:fadeUp={{ y: 30 }}>
+    <div class="text-center mb-12 " >
       <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight">Mặt Bằng <span class="text-accent">Dự Án</span></h2>
       <p class="text-[1.15rem] text-text-secondary mt-4">Thiết kế thông minh tối ưu hóa không gian, 100% căn hộ đón ánh sáng tự nhiên và luồng sinh khí.</p>
     </div>
 
-    <div class="flex justify-center gap-4 mb-10 gsap-reveal" use:fadeUp={{ y: 20, delay: 0.1 }}>
+    <div class="flex justify-center gap-4 mb-10 " >
       <button 
         class="px-8 py-3 rounded-full font-bold transition-all shadow-sm {activeMainTab === 'floor' ? 'bg-accent text-black shadow-[0_4px_15px_rgba(239,101,34,0.3)]' : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}" 
         onclick={() => activeMainTab = 'floor'}
@@ -56,7 +56,7 @@
       </button>
     </div>
 
-    <div class="bg-white/70 dark:bg-slate-900/75 backdrop-blur-md rounded-[1.5rem] p-4 md:p-8 border border-border-color shadow-lg gsap-reveal min-h-[600px]" use:fadeUp={{ y: 20, delay: 0.2 }}>
+    <div class="bg-white/70 dark:bg-slate-900/75 backdrop-blur-md rounded-[1.5rem] p-4 md:p-8 border border-border-color shadow-lg  min-h-[600px]" >
       {#if activeMainTab === 'floor'}
         <div class="flex justify-center gap-2 mb-6 flex-wrap" in:fade={{duration: 200}}>
           {#each floorPlans as plan}
@@ -134,7 +134,7 @@
     </div>
 
     {#if showCta}
-      <div class="flex justify-center mt-16 gsap-reveal" use:fadeUp={{ y: 20 }}>
+      <div class="flex justify-center mt-16 " >
         <a href="/mat-bang" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-black rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1">
           Xem Bản Vẽ Chi Tiết Tầng 02 & 03-30
         </a>

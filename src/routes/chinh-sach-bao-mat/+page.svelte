@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fadeUp } from '$lib/actions/gsap';
+  
 
   const sections = [
     {
@@ -49,7 +49,7 @@
   <div class="max-w-5xl mx-auto px-6 relative z-10">
 
     <!-- Header -->
-    <div class="text-center mb-16 gsap-reveal" use:fadeUp={{ y: 30 }}>
+    <div class="text-center mb-16 " >
       <p class="text-amber-300 italic text-2xl mb-2">
         Privacy Policy
       </p>
@@ -69,7 +69,7 @@
 
       <div class="space-y-10">
         {#each sections as section, i}
-          <div class="gsap-reveal" use:fadeUp={{ y: 20, delay: i * 0.08 }}>
+          <div class="" >
             <h2 class="text-2xl font-bold text-amber-300 mb-3">
               {section.title}
             </h2>

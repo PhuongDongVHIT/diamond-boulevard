@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fadeUp } from '$lib/actions/gsap';
+  
   import { fade, slide } from 'svelte/transition';
 
   type Method = {
@@ -45,7 +45,7 @@
 
 <section class="py-16 relative overflow-hidden" id="payment">
   <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-20">
-    <div class="text-center mb-16 gsap-reveal" use:fadeUp={{ y: 30 }}>
+    <div class="text-center mb-16 " >
       <p class="text-[2rem] md:text-[2.5rem] font-signature text-black mb-[-10px] md:mb-[-15px] italic">
         Phương thức
       </p>
@@ -55,7 +55,7 @@
     </div>
 
     <!-- Tabs -->
-    <div class="flex flex-wrap justify-center gap-4 mb-8 gsap-reveal" use:fadeUp={{ y: 20, delay: 0.1 }}>
+    <div class="flex flex-wrap justify-center gap-4 mb-8 " >
       {#each methods as method}
         <button
           class="px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300

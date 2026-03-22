@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fadeUp } from '$lib/actions/gsap';
+  
   let searchQuery = $state('');
 
   function handleSearch(e: Event) {
@@ -13,7 +13,7 @@
 <section class="relative min-h-[90vh] flex items-center bg-[url('/images/hero.png')] bg-cover bg-center bg-fixed">
   <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
   <div class="relative z-10 text-slate-50 w-full max-w-7xl mx-auto px-6 md:px-8">
-    <div class="max-w-[700px] gsap-reveal" use:fadeUp={{ y: 50, duration: 1.2 }}>
+    <div class="max-w-[700px] " >
       <h1 class="text-slate-50 mb-6 text-4xl md:text-[4.5rem] font-extrabold tracking-tight leading-[1.1]">Căn Hộ Cao Cấp <br><span class="text-accent">Mặt Tiền QL 13</span></h1>
       <p class="text-[1.25rem] mb-12 text-slate-300 max-w-[500px] leading-relaxed">Trải nghiệm phong cách sống đô thị hiện đại và năng động, nơi mọi tiện nghi và kết nối giao thông đều nằm trong tầm tay của bạn.</p>
       
