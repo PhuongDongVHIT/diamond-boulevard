@@ -1,5 +1,5 @@
 <script>
-  import Carousel from "$lib/components/Carousel.svelte";
+  // import Carousel from "$lib/components/Carousel.svelte";
   // import ProjectDetail from "$lib/components/ProjectDetail.svelte";
   // import Amenities from "$lib/components/Amenities.svelte";
   // import FloorPlan from "$lib/components/FloorPlan.svelte";
