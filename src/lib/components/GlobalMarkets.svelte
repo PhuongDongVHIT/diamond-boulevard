@@ -33,13 +33,13 @@
   ];
 </script>
 
-<section class="py-32 bg-bg-color">
+<section class="py-32 ">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <div class="text-center max-w-[700px] mx-auto mb-20">
       <h2
         class="text-4xl md:text-[3rem] font-extrabold tracking-tight leading-tight"
       >
-        Tầm Vóc Quốc Tế, <br /><span class="text-accent"
+        Tầm Vóc Quốc Tế, <br /><span class="text-white"
           >Chuyên Môn Địa Phương</span
         >
       </h2>

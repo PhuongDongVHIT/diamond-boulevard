@@ -10,7 +10,7 @@
 
 <Header />
 
-<main class="bg-[#0a2d4f]">
+<main class="bg-[#0a2d4f] text-white">
   {@render children()}
 </main>
 <FloatingNav />

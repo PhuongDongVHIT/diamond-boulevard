@@ -46,7 +46,7 @@
       class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase mb-6 drop-shadow-lg leading-tight"
     >
       Mặt Bằng <span
-        class="text-accent underline decoration-4 underline-offset-8"
+        class="text-white underline decoration-4 underline-offset-8"
         >Kiến Trúc</span
       >
     </h1>
@@ -60,7 +60,7 @@
 </section>
 
 <!-- High-Res Floor Plans Display (SEO Driven) -->
-<section class="py-24 bg-bg-color">
+<section class="py-24 ">
   <div class="max-w-[1400px] mx-auto px-6 md:px-8">
     <!-- Floor 2 -->
     <div class="mb-32">
@@ -112,7 +112,7 @@
           <div
             class="hidden flex-col items-center justify-center p-12 text-slate-400 text-center w-full min-h-[300px]"
           >
-            Vui lòng cập nhật ảnh <code class="text-accent"
+            Vui lòng cập nhật ảnh <code class="text-white"
               >mat-bang-tang-2-diamond-boulevard.webp</code
             >
           </div>
@@ -153,7 +153,7 @@
           <div
             class="hidden flex-col items-center justify-center p-12 text-slate-400 text-center w-full min-h-[300px]"
           >
-            Vui lòng cập nhật ảnh <code class="text-accent"
+            Vui lòng cập nhật ảnh <code class="text-white"
               >mat-bang-tang-3-30-diamond-boulevard.webp</code
             >
           </div>

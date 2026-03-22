@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 mb-12 md:mb-16">
       <div class="md:col-span-5 lg:col-span-4">
         <a href="/" class="text-xl md:text-2xl font-extrabold text-text-color">
-          <span class="text-accent">Diamond</span> Boulevard
+          <span class="text-white">Diamond</span> Boulevard
         </a>
         <p class="mt-4 text-text-secondary max-w-xs text-sm">
           Dự án phức hợp căn hộ thương mại cao cấp, biểu tượng sống mới trên mặt
@@ -20,28 +20,28 @@
             <li>
               <a
                 href="/mat-bang"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Tất cả sản phẩm</a
               >
             </li>
             <li>
               <a
                 href="/mat-bang"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Căn hộ Studio</a
               >
             </li>
             <li>
               <a
                 href="/mat-bang"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Căn hộ 2 Phòng Ngủ</a
               >
             </li>
             <li>
               <a
                 href="/mat-bang"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Căn hộ 3 Phòng Ngủ</a
               >
             </li>
@@ -54,56 +54,56 @@
             <li>
               <a
                 href="/tong-quan"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Tổng quan</a
               >
             </li>
             <li>
               <a
                 href="/vi-tri"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Vị trí</a
               >
             </li>
             <li>
               <a
                 href="#/mat-bang"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Mặt bằng</a
               >
             </li>
             <li>
               <a
                 href="/tien-ich"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Tiện ích</a
               >
             </li>
             <li>
               <a
                 href="/phap-ly"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Pháp lý</a
               >
             </li>
             <li>
               <a
                 href="/thu-vien"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Thư viện</a
               >
             </li>
             <li>
               <a
                 href="/tin-tuc"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Tin tức</a
               >
             </li>
             <li>
               <a
                 href="/lien-he"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Liên hệ</a
               >
             </li>
@@ -116,21 +116,21 @@
             <li>
               <a
                 href="/chinh-sach-bao-mat"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Chính sách bảo mật</a
               >
             </li>
             <li>
               <a
                 href="#terms"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Điều khoản dịch vụ</a
               >
             </li>
             <li>
               <a
                 href="#cookies"
-                class="text-sm text-text-secondary hover:text-accent transition-colors"
+                class="text-sm text-text-secondary hover:text-white transition-colors"
                 >Chính sách Cookie</a
               >
             </li>

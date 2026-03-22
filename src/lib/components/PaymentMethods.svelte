@@ -51,7 +51,7 @@
         Phương thức
       </p>
       <h2
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase text-accent drop-shadow-[0_0_15px_rgba(197,160,89,0.3)]"
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase text-white drop-shadow-[0_0_15px_rgba(197,160,89,0.3)]"
       >
         Thanh Toán
       </h2>

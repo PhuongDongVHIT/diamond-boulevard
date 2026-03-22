@@ -69,7 +69,7 @@
   });
 </script>
 
-<div class="relative w-screen h-screen overflow-hidden bg-bg-color">
+<div class="relative w-screen h-screen overflow-hidden ">
   {#each items as item, i}
     <div
       class="absolute inset-0 w-screen h-screen bg-cover bg-center flex items-end justify-center transition-opacity duration-1000 ease-in-out {i ===
@@ -88,7 +88,7 @@
           : 'opacity-0 translate-y-5 scale-95'}"
       >
         <h2
-          class="text-sm md:text-base uppercase tracking-[3px] text-accent mb-3 md:mb-4 font-semibold"
+          class="text-sm md:text-base uppercase tracking-[3px] text-white mb-3 md:mb-4 font-semibold"
         >
           {item.subtitle}
         </h2>

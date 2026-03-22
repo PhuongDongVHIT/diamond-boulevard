@@ -26,7 +26,7 @@
   ];
 </script>
 
-<section class="py-16 md:py-24 lg:py-32 bg-bg-color">
+<section class="py-16 md:py-24 lg:py-32 ">
   <div
     class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center"
   >
@@ -36,7 +36,7 @@
         <h2
         class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
       >
-        Tổng Quan <span class="text-accent">Diamond Boulevard</span>
+        Tổng Quan <span class="text-white">Diamond Boulevard</span>
       </h2>
 
       <p class="text-base md:text-lg text-text-color my-6 md:my-8 leading-relaxed">
@@ -76,7 +76,7 @@
           {#each stats as stat}
             <div class="flex flex-col">
               <span
-                class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-accent leading-none tracking-tight"
+                class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-none tracking-tight"
               >
                 {stat.value}
               </span>

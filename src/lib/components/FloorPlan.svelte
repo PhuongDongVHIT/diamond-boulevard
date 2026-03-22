@@ -69,14 +69,14 @@
   }
 </script>
 
-<section class="py-12 md:py-16 bg-bg-color relative">
+<section class="py-12 md:py-16  relative">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
 
     <div class="flex justify-center gap-4 mb-10">
       <button
         class="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base rounded-full font-bold transition-all shadow-sm {activeMainTab ===
         'floor'
-          ? 'bg-accent text-black shadow-[0_4px_15px_rgba(239,101,34,0.3)]'
+          ? 'bg-accent text-white shadow-[0_4px_15px_rgba(239,101,34,0.3)]'
           : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}"
         onclick={() => (activeMainTab = "floor")}
       >
@@ -85,7 +85,7 @@
       <button
         class="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base rounded-full font-bold transition-all shadow-sm {activeMainTab ===
         'apartment'
-          ? 'bg-accent text-black shadow-[0_4px_15px_rgba(239,101,34,0.3)]'
+          ? 'bg-accent text-white shadow-[0_4px_15px_rgba(239,101,34,0.3)]'
           : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}"
         onclick={() => (activeMainTab = "apartment")}
       >
@@ -105,7 +105,7 @@
             <button
               class="px-6 py-2 rounded-lg font-semibold transition-colors {activeFloor ===
               plan.id
-                ? 'bg-bg-secondary text-accent border border-accent/20 shadow-sm'
+                ? 'bg-bg-secondary text-white border border-accent/20 shadow-sm'
                 : 'text-text-secondary hover:text-text-color'}"
               onclick={() => (activeFloor = plan.id)}
             >
@@ -165,7 +165,7 @@
             <button
               class="px-6 py-2 rounded-lg font-semibold transition-colors {activeApartment ===
               apt.id
-                ? 'bg-bg-secondary text-accent border border-accent/20 shadow-sm'
+                ? 'bg-bg-secondary text-white border border-accent/20 shadow-sm'
                 : 'text-text-secondary hover:text-text-color'}"
               onclick={() => (activeApartment = apt.id)}
             >
@@ -191,7 +191,7 @@
                 >
                   Diện tích tim tường
                 </div>
-                <div class="text-3xl md:text-4xl font-extrabold text-accent">
+                <div class="text-3xl md:text-4xl font-extrabold text-white">
                   {currentApartment.timtuong}
                 </div>
               </div>

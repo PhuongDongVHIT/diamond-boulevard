@@ -48,7 +48,7 @@
           class="flex items-center gap-2 md:gap-4 bg-white/70 dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 p-3 md:p-4 rounded-xl border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-md hover:border-accent/40 group cursor-pointer"
         >
           <span
-            class="text-xl md:text-2xl font-black text-accent opacity-30 group-hover:opacity-60 transition-opacity"
+            class="text-xl md:text-2xl font-black text-white opacity-30 group-hover:opacity-60 transition-opacity"
             >{(i + 1).toString().padStart(2, "0")}</span
           >
           <span class="font-bold text-sm md:text-base text-text-color tracking-tight leading-tight"

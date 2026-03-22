@@ -114,8 +114,8 @@
       >
       <a
         href="/tong-quan"
-        class="text-3xl font-bold tracking-tight text-accent"
-        onclick={() => (isMobileMenuOpen = false)}>Khám Phá</a
+        class="text-3xl font-bold tracking-tight text-white"
+        onclick={() => (isMobileMenuOpen = false)}>Tổng quan</a
       >
       <a
         href="/mat-bang"

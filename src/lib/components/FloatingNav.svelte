@@ -37,7 +37,7 @@
       <button
         class="bg-transparent border-none flex items-center cursor-pointer text-[0.9rem] font-bold transition-colors p-0 {activeSection ===
         section.id
-          ? 'text-accent'
+          ? 'text-white'
           : 'text-text-secondary'}"
       >
         {#if activeSection === section.id}
@@ -63,7 +63,7 @@
     <button
       class="rounded-full flex items-center justify-center cursor-pointer shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-200 hover:scale-110 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] font-bold {link.isAccent
         ? 'bg-accent text-white w-14 h-14 lg:w-[60px] lg:h-[60px] text-[1.1rem]'
-        : 'bg-bg-color w-11 h-11 lg:w-[50px] lg:h-[50px] text-[1.2rem]'}"
+        : ' w-11 h-11 lg:w-[50px] lg:h-[50px] text-[1.2rem]'}"
       style="color: {link.iconColor || 'inherit'}"
     >
       {#if link.id === "360"}

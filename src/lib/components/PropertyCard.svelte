@@ -3,7 +3,7 @@
 </script>
 
 <article
-  class="bg-bg-color rounded-[1.5rem] overflow-hidden transition-all duration-300 border border-border-color shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] group"
+  class=" rounded-[1.5rem] overflow-hidden transition-all duration-300 border border-border-color shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] group"
 >
   <div class="relative aspect-[4/3] overflow-hidden">
     <img

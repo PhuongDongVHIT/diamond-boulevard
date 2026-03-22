@@ -21,7 +21,7 @@
   ];
 </script>
 
-<section class="py-32 bg-bg-color relative overflow-hidden">
+<section class="py-32  relative overflow-hidden">
   <div
     class="absolute -top-[100px] -left-[10vw] w-[600px] h-[600px] bg-[radial-gradient(circle,var(--accent-light)_0%,transparent_70%)] rounded-full z-0 opacity-50 pointer-events-none"
   ></div>
@@ -29,7 +29,7 @@
   <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
     <div class="text-center mb-20 max-w-[600px] mx-auto">
       <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight">
-        Dịch Vụ <span class="text-accent">Tinh Tế</span>
+        Dịch Vụ <span class="text-white">Tinh Tế</span>
       </h2>
       <p class="text-[1.15rem] text-text-secondary mt-4">
         Giải pháp bất động sản thiết kế riêng cho những khách hàng khắt khe nhất
@@ -101,7 +101,7 @@
           </p>
           <a
             href="/contact"
-            class="font-semibold text-accent flex items-center gap-2 mt-auto w-max group"
+            class="font-semibold text-white flex items-center gap-2 mt-auto w-max group"
             >Tìm hiểu thêm <span
               class="transition-transform duration-150 group-hover:translate-x-1"
               >→</span

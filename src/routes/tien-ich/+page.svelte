@@ -38,7 +38,7 @@
     <h1
       class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase mb-6 drop-shadow-lg leading-tight"
     >
-      <span class="text-accent underline decoration-4 underline-offset-8"
+      <span class="text-white underline decoration-4 underline-offset-8"
         >Tiện Ích</span
       >
     </h1>

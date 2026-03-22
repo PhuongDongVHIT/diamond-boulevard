@@ -33,7 +33,7 @@
   }
 </script>
 
-<section class="py-16 md:py-24 lg:py-32 bg-bg-color relative overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32  relative overflow-hidden">
   <div
     class="absolute -bottom-[20%] -right-[10%] w-[800px] h-[800px] bg-[radial-gradient(circle,var(--accent-light)_0%,transparent_70%)] rounded-full z-0 opacity-40 pointer-events-none"
   ></div>
@@ -65,7 +65,7 @@
 
         <!-- Marker -->
         <div
-          class="absolute bg-white dark:bg-slate-800 border-[3px] border-accent w-[64px] h-[64px] rounded-full flex items-center justify-center shadow-xl text-3xl font-black text-accent top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+          class="absolute bg-white dark:bg-slate-800 border-[3px] border-accent w-[64px] h-[64px] rounded-full flex items-center justify-center shadow-xl text-3xl font-black text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
         >
           <div
             class="absolute inset-0 bg-accent rounded-full -z-10 opacity-40 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"
@@ -81,7 +81,7 @@
         class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
       >
         Toạc Độ Đắc Địa <br />
-        <span class="text-accent">Tâm Điểm Giao Thương</span>
+        <span class="text-white">Tâm Điểm Giao Thương</span>
       </h2>
 
       <p class="text-base md:text-lg text-text-secondary my-4 leading-relaxed">
@@ -100,9 +100,6 @@
             </div>
 
             <div>
-              <h3 class="text-base md:text-lg font-bold text-text-color mb-1">
-                {item.title}
-              </h3>
               <p class="text-text-secondary leading-relaxed">
                 {item.desc}
               </p>

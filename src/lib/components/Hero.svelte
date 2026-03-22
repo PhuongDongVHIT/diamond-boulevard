@@ -22,7 +22,7 @@
       <h1
         class="text-slate-50 mb-4 md:mb-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1]"
       >
-        Căn Hộ Cao Cấp <br /><span class="text-accent">Mặt Tiền QL 13</span>
+        Căn Hộ Cao Cấp <br /><span class="text-white">Mặt Tiền QL 13</span>
       </h1>
       <p
         class="text-base md:text-lg lg:text-xl mb-8 md:mb-12 text-slate-300 max-w-[90%] md:max-w-[500px] leading-relaxed"
