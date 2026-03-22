@@ -12,20 +12,24 @@
         <div>
           <h3 class="text-lg font-bold text-text-color mb-6">Bất động sản</h3>
           <ul class="space-y-3">
-            <li><a href="/properties" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Tất cả sản phẩm</a></li>
-            <li><a href="/properties?type=studio" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Căn hộ Studio</a></li>
-            <li><a href="/properties?type=2pn" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Căn hộ 2 Phòng Ngủ</a></li>
-            <li><a href="/properties?type=3pn" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Căn hộ 3 Phòng Ngủ</a></li>
+            <li><a href="/mat-bang" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Tất cả sản phẩm</a></li>
+            <li><a href="/mat-bang" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Căn hộ Studio</a></li>
+            <li><a href="/mat-bang" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Căn hộ 2 Phòng Ngủ</a></li>
+            <li><a href="/mat-bang" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Căn hộ 3 Phòng Ngủ</a></li>
           </ul>
         </div>
         
         <div>
-          <h3 class="text-lg font-bold text-text-color mb-6">Công ty</h3>
+          <h3 class="text-lg font-bold text-text-color mb-6">Dự án</h3>
           <ul class="space-y-3">
-            <li><a href="#about" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Về chúng tôi</a></li>
-            <li><a href="#agents" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Đại lý của chúng tôi</a></li>
-            <li><a href="#careers" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Tuyển dụng</a></li>
-            <li><a href="#contact" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Liên hệ</a></li>
+            <li><a href="/tong-quan" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Tổng quan</a></li>
+            <li><a href="/vi-tri" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Vị trí</a></li>
+            <li><a href="#/mat-bang" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Mặt bằng</a></li>
+            <li><a href="/tien-ich" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Tiện ích</a></li>
+            <li><a href="/phap-ly" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Pháp lý</a></li>
+            <li><a href="/thu-vien" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Thư viện</a></li>
+            <li><a href="/tin-tuc" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Tin tức</a></li>
+            <li><a href="/lien-he" class="text-[0.95rem] text-text-secondary hover:text-accent transition-colors">Liên hệ</a></li>
           </ul>
         </div>
 

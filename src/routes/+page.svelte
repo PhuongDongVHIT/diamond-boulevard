@@ -6,6 +6,7 @@
   import LocationMap from "$lib/components/LocationMap.svelte";
   import PaymentMethods from "$lib/components/PaymentMethods.svelte";
     import Contact from "$lib/components/Contact.svelte";
+    import LegalGallery from "$lib/components/LegalGallery.svelte";
   const title = "Diamond Boulevard | Dự Án Căn Hộ Cao Cấp Quốc Lộ 13";
   const desc =
     "Sống tại trung tâm giao điểm phồn hoa. Diamond Boulevard mang đến  căn hộ cao cấp chuẩn chuyên gia với 30+ tiện ích nội khu đỉnh cao.";
@@ -31,4 +32,5 @@
   <div id="section-4"><FloorPlan showCta={true} /></div>
   <div id="section-3"><Amenities showCta={true} /></div>
   <div id="payment"><PaymentMethods /></div>
+  <div id="payment"><LegalGallery /></div>
 </main>

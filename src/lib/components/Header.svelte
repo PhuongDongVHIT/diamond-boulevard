@@ -21,12 +21,7 @@
     
     <!-- Logo -->
     <a href="/" class="flex flex-col items-start gap-0 transition-transform duration-300 hover:opacity-80">
-      <span class="text-xl md:text-2xl font-black tracking-tight text-text-color leading-none">
-        DIAMOND
-      </span>
-      <span class="text-[0.65rem] md:text-sm font-semibold tracking-[0.2em] text-accent leading-none mt-1 uppercase">
-        Boulevard
-      </span>
+      <img src="/logo.png" class="w-12 h-full" alt="" srcset="">
     </a>
 
     <!-- Desktop Nav -->
@@ -36,12 +31,12 @@
       <a href="/tien-ich" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Tiện Ích</a>
       <a href="/tin-tuc" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Tin tức</a>
       <a href="/thu-vien" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Thư viện</a>
-      <a href="/#contact" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Liên Hệ</a>
+      <a href="/lien-he" class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide">Liên Hệ</a>
     </nav>
 
     <!-- Call to Action -->
     <div class="hidden md:block">
-      <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full font-semibold text-[0.85rem] tracking-wide transition-all duration-300 bg-text-color text-bg-color hover:scale-105 shadow-[0_4px_14px_rgba(0,0,0,0.1)]">
+      <a href="lien-he" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full font-semibold text-[0.85rem] tracking-wide transition-all duration-300 bg-text-color text-bg-color hover:scale-105 shadow-[0_4px_14px_rgba(0,0,0,0.1)]">
         Đăng ký tư vấn
       </a>
     </div>
@@ -60,11 +55,11 @@
   <div class="fixed inset-0 z-[999] glass" transition:fade={{duration: 300}}>
     <div class="flex flex-col items-center justify-center h-full w-full gap-8">
       <a href="/" class="text-3xl font-bold tracking-tight text-text-color" onclick={() => isMobileMenuOpen = false}>Tổng Quan</a>
-      <a href="/kham-pha" class="text-3xl font-bold tracking-tight text-accent" onclick={() => isMobileMenuOpen = false}>Khám Phá</a>
+      <a href="/tong-quan" class="text-3xl font-bold tracking-tight text-accent" onclick={() => isMobileMenuOpen = false}>Khám Phá</a>
       <a href="/mat-bang" class="text-3xl font-bold tracking-tight text-text-color" onclick={() => isMobileMenuOpen = false}>Mặt Bằng</a>
       <a href="/tien-ich" class="text-3xl font-bold tracking-tight text-text-color" onclick={() => isMobileMenuOpen = false}>Tiện Ích</a>
-      <a href="/#contact" class="text-3xl font-bold tracking-tight text-text-color" onclick={() => isMobileMenuOpen = false}>Liên Hệ</a>
-      <a href="#contact" class="mt-8 px-8 py-4 rounded-full font-bold text-lg bg-text-color text-bg-color" onclick={() => isMobileMenuOpen = false}>
+      <a href="/lien-he" class="text-3xl font-bold tracking-tight text-text-color" onclick={() => isMobileMenuOpen = false}>Liên Hệ</a>
+      <a href="#" class="mt-8 px-8 py-4 rounded-full font-bold text-lg bg-text-color text-bg-color" onclick={() => isMobileMenuOpen = false}>
         Đăng ký tư vấn
       </a>
     </div>

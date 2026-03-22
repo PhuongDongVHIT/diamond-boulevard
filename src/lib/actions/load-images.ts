@@ -14,6 +14,15 @@ export const images = Object.entries(modules).map(([path]) => {
   };
 });
 
+const modulesLaw = import.meta.glob('/static/laws/*.webp', { eager: true });
+
+export const imageLaws = Object.entries(modulesLaw).map(([path]) => {
+  return {
+    src: path.replace('/static', ''),
+    title: path.split('/').pop()?.replace('.webp', '') || '',
+  };
+});
+
 export type ImageItem = {
   src: string;
   title: string;

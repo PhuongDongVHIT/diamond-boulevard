@@ -110,7 +110,7 @@
     <p class="text-lg text-text-secondary leading-relaxed mb-10">
       Mỗi thiết kế căn hộ mở ra một giải pháp không gian hoàn mỹ cho gia đình bạn. Hãy đăng ký ngay để nhận file bản vẽ CAD, ảnh 3D phân giải cao và bảng cập nhật thiết kế MỚI NHẤT từ Chủ đầu tư Tecco.
     </p>
-    <a href="/#contact" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1">
+    <a href="/lien-he" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1">
       Yêu Cầu Tài Liệu Phân Giải Cao
     </a>
   </div>
