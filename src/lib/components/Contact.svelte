@@ -73,33 +73,33 @@
   }
 </script>
 
-<section class="relative pt-24 min-h-[800px] bg-center bg-cover bg-no-repeat">
+<section class="relative py-16 md:py-24 lg:py-32 min-h-[800px] bg-center bg-cover bg-no-repeat">
   <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
     <div
       class="flex flex-col lg:flex-row rounded-[1.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)] mb-16"
     >
       <!-- Left -->
       <div
-        class="flex-1 bg-accent text-black py-16 px-8 md:px-12 flex flex-col"
+        class="flex-1 bg-accent text-bg-color py-12 md:py-16 px-6 md:px-12 flex flex-col"
       >
         <h2
-          class="text-[2.5rem] md:text-[3rem] font-extrabold leading-[1.1] mb-12 uppercase"
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.1] mb-8 md:mb-12 uppercase"
         >
           Diamond Boulevard
         </h2>
 
-        <div class="flex flex-col gap-6 mb-auto">
-          <div class="flex items-start gap-4 text-[1.05rem] font-medium">
+        <div class="flex flex-col gap-4 md:gap-6 mb-auto">
+          <div class="flex items-start gap-4 text-sm md:text-base font-medium">
             <span class="text-xl">📞</span>
             <p>0799 036 842</p>
           </div>
 
-          <div class="flex items-start gap-4 text-[1.05rem] font-medium">
+          <div class="flex items-start gap-4 text-sm md:text-base font-medium">
             <span class="text-xl">📍</span>
             <p>Quốc lộ 13, Thuận Giao, TP.Thuận An, Bình Dương</p>
           </div>
 
-          <div class="flex items-start gap-4 text-[1.05rem] font-medium">
+          <div class="flex items-start gap-4 text-sm md:text-base font-medium">
             <span class="text-xl">✉️</span>
             <p>info@diamondboulevard.io.vn</p>
           </div>
@@ -107,6 +107,7 @@
 
         <div class="mt-12 w-full h-[300px] rounded-lg overflow-hidden">
           <iframe
+            title="Bản đồ vị trí"
             src="https://www.google.com/maps/embed?pb=!1m18..."
             class="w-full h-full border-0"
             loading="lazy"
@@ -120,7 +121,7 @@
           LIÊN HỆ TƯ VẤN
         </h3>
 
-        <form on:submit|preventDefault={submitForm} class="flex flex-col gap-5">
+        <form onsubmit={(e) => { e.preventDefault(); submitForm(); }} class="flex flex-col gap-5">
           <div>
             <input
               bind:value={name}
@@ -170,7 +171,7 @@
           <button
             type="submit"
             disabled={loading}
-            class="w-full py-4 rounded-full bg-orange-500 text-white font-bold hover:bg-orange-600 transition disabled:opacity-50"
+            class="w-full py-3 md:py-4 rounded-full bg-accent text-bg-color font-bold hover:bg-accent-hover transition disabled:opacity-50 text-sm md:text-base"
           >
             {loading ? "Đang gửi..." : "Đăng ký nhận báo giá"}
           </button>

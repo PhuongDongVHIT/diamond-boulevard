@@ -24,7 +24,7 @@
   ];
 </script>
 
-<section class="relative py-12 bg-bg-secondary overflow-hidden">
+<section class="relative py-16 md:py-24 lg:py-32 bg-bg-secondary overflow-hidden">
   <div
     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full bg-accent-light blur-[60px] opacity-60 pointer-events-none z-0"
   ></div>
@@ -45,13 +45,13 @@
     >
       {#each amenities as amenity, i}
         <div
-          class="flex items-center gap-4 bg-white/70 dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 p-4 rounded-xl border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-md hover:border-accent/40 group"
+          class="flex items-center gap-2 md:gap-4 bg-white/70 dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 p-3 md:p-4 rounded-xl border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-md hover:border-accent/40 group cursor-pointer"
         >
           <span
-            class="text-2xl font-black text-accent opacity-30 group-hover:opacity-60 transition-opacity"
+            class="text-xl md:text-2xl font-black text-accent opacity-30 group-hover:opacity-60 transition-opacity"
             >{(i + 1).toString().padStart(2, "0")}</span
           >
-          <span class="font-bold text-text-color tracking-tight leading-tight"
+          <span class="font-bold text-sm md:text-base text-text-color tracking-tight leading-tight"
             >{amenity}</span
           >
         </div>
@@ -62,7 +62,7 @@
       <div class="flex justify-center mt-12">
         <a
           href="/tien-ich"
-          class="inline-flex items-center justify-center px-10 py-4 bg-accent text-blue-800 rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1"
+          class="btn btn-primary text-sm md:text-base px-6 md:px-10 lg:px-12 py-3 md:py-4"
         >
           Khám Phá Chi Tiết Tiện Ích
         </a>

@@ -33,7 +33,7 @@
   }
 </script>
 
-<section class="py-32 bg-bg-color relative overflow-hidden">
+<section class="py-16 md:py-24 lg:py-32 bg-bg-color relative overflow-hidden">
   <div
     class="absolute -bottom-[20%] -right-[10%] w-[800px] h-[800px] bg-[radial-gradient(circle,var(--accent-light)_0%,transparent_70%)] rounded-full z-0 opacity-40 pointer-events-none"
   ></div>
@@ -78,13 +78,13 @@
     <!-- Left Content -->
     <div class="">
       <h2
-        class="text-4xl md:text-[3rem] font-extrabold tracking-tight leading-tight"
+        class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
       >
         Toạc Độ Đắc Địa <br />
         <span class="text-accent">Tâm Điểm Giao Thương</span>
       </h2>
 
-      <p class="text-[1.15rem] text-text-secondary my-4 leading-relaxed">
+      <p class="text-base md:text-lg text-text-secondary my-4 leading-relaxed">
         Diamond Boulevard sở hữu vị trí trung tâm đích thực — nơi giao thương,
         nhịp sống và giá trị đầu tư hội tụ, kiến tạo sức bật bền vững cho tương
         lai.
@@ -100,7 +100,7 @@
             </div>
 
             <div>
-              <h3 class="text-[1.1rem] font-bold text-text-color mb-1">
+              <h3 class="text-base md:text-lg font-bold text-text-color mb-1">
                 {item.title}
               </h3>
               <p class="text-text-secondary leading-relaxed">

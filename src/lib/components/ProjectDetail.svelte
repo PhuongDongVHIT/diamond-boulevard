@@ -26,19 +26,19 @@
   ];
 </script>
 
-<section class="py-32 bg-bg-color">
+<section class="py-16 md:py-24 lg:py-32 bg-bg-color">
   <div
     class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center"
   >
     <!-- Left Content -->
     <div>
       <h2
-        class="text-4xl md:text-[3.2rem] font-extrabold tracking-tight leading-tight"
+        class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
       >
         Tổng Quan <span class="text-accent">Diamond Boulevard</span>
       </h2>
 
-      <p class="text-[1.15rem] text-text-color my-8 leading-relaxed">
+      <p class="text-base md:text-lg text-text-color my-6 md:my-8 leading-relaxed">
         Diamond Boulevard là dự án căn hộ cao tầng nổi bật tại cửa ngõ phía Đông
         TP.HCM, sở hữu vị trí chiến lược ngay mặt tiền Quốc lộ 13 — tuyến giao
         thông huyết mạch kết nối trực tiếp Bình Dương và trung tâm thành phố.
@@ -48,12 +48,12 @@
         {#each projectInfo as item}
           <div class="border-b border-border-color pb-4">
             <p
-              class="text-sm uppercase tracking-[1px] text-text-secondary mb-1"
+              class="text-xs md:text-sm uppercase tracking-[1px] text-text-secondary mb-1"
             >
               {item.label}
             </p>
             <p
-              class="text-[1.05rem] font-medium text-text-color leading-relaxed"
+              class="text-base md:text-lg font-medium text-text-color leading-relaxed"
             >
               {item.value}
             </p>
@@ -73,11 +73,11 @@
           {#each stats as stat}
             <div class="flex flex-col">
               <span
-                class="text-5xl font-extrabold text-accent leading-none tracking-tight"
+                class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-accent leading-none tracking-tight"
               >
                 {stat.value}
               </span>
-              <span class="text-[1rem] font-bold text-text-color mt-1">
+              <span class="text-xs md:text-sm lg:text-base font-bold text-text-color mt-1">
                 {stat.unit}
               </span>
             </div>

@@ -42,16 +42,16 @@
   );
 </script>
 
-<section class="py-16 relative overflow-hidden" id="payment">
+<section class="py-16 md:py-24 lg:py-32 relative overflow-hidden" id="payment">
   <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-20">
-    <div class="text-center mb-16">
+    <div class="text-center mb-12 md:mb-16">
       <p
-        class="text-[2rem] md:text-[2.5rem] font-signature text-black mb-[-10px] md:mb-[-15px] italic"
+        class="text-2xl sm:text-3xl md:text-4xl font-signature text-text-color mb-[-10px] md:mb-[-15px] italic"
       >
         Phương thức
       </p>
       <h2
-        class="text-4xl md:text-[4rem] font-black tracking-tight uppercase text-amber-300 drop-shadow-[0_0_15px_rgba(251,191,36,0.3)]"
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase text-accent drop-shadow-[0_0_15px_rgba(197,160,89,0.3)]"
       >
         Thanh Toán
       </h2>
@@ -61,10 +61,10 @@
     <div class="flex flex-wrap justify-center gap-4 mb-8">
       {#each methods as method}
         <button
-          class="px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300
+          class="px-6 md:px-8 py-3 md:py-4 rounded-full font-bold uppercase tracking-wider text-xs md:text-sm transition-all duration-300
           {activeTab === method.key
-            ? 'bg-amber-400 text-slate-900 shadow-[0_0_30px_rgba(251,191,36,0.4)] scale-105'
-            : 'bg-white/5 text-black hover:bg-white/10 hover:text-amber-100 border border-white/10'}"
+            ? 'bg-accent text-bg-color shadow-[0_0_30px_rgba(197,160,89,0.4)] scale-105'
+            : 'bg-text-color/5 text-text-color hover:bg-text-color/10 border border-border-color'}"
           onclick={() => (activeTab = method.key)}
         >
           {method.title}

@@ -69,13 +69,13 @@
   }
 </script>
 
-<section class="py-16 bg-bg-color relative">
+<section class="py-16 md:py-24 lg:py-32 bg-bg-color relative">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-[3rem] font-extrabold tracking-tight">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
         Mặt Bằng <span class="text-accent">Dự Án</span>
       </h2>
-      <p class="text-[1.15rem] text-text-secondary mt-4">
+      <p class="text-base md:text-lg text-text-secondary mt-4">
         Thiết kế thông minh tối ưu hóa không gian, 100% căn hộ đón ánh sáng tự
         nhiên và luồng sinh khí.
       </p>
@@ -83,7 +83,7 @@
 
     <div class="flex justify-center gap-4 mb-10">
       <button
-        class="px-8 py-3 rounded-full font-bold transition-all shadow-sm {activeMainTab ===
+        class="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base rounded-full font-bold transition-all shadow-sm {activeMainTab ===
         'floor'
           ? 'bg-accent text-black shadow-[0_4px_15px_rgba(239,101,34,0.3)]'
           : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}"
@@ -92,7 +92,7 @@
         Mặt Bằng Tầng
       </button>
       <button
-        class="px-8 py-3 rounded-full font-bold transition-all shadow-sm {activeMainTab ===
+        class="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base rounded-full font-bold transition-all shadow-sm {activeMainTab ===
         'apartment'
           ? 'bg-accent text-black shadow-[0_4px_15px_rgba(239,101,34,0.3)]'
           : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}"
@@ -196,22 +196,22 @@
             <div class="space-y-8">
               <div>
                 <div
-                  class="text-[0.85rem] text-text-secondary uppercase tracking-[1px] mb-2 font-semibold"
+                  class="text-xs md:text-sm text-text-secondary uppercase tracking-[1px] mb-2 font-semibold"
                 >
                   Diện tích tim tường
                 </div>
-                <div class="text-4xl font-extrabold text-accent">
+                <div class="text-3xl md:text-4xl font-extrabold text-accent">
                   {currentApartment.timtuong}
                 </div>
               </div>
 
               <div>
                 <div
-                  class="text-[0.85rem] text-text-secondary uppercase tracking-[1px] mb-2 font-semibold"
+                  class="text-xs md:text-sm text-text-secondary uppercase tracking-[1px] mb-2 font-semibold"
                 >
                   Diện tích thông thủy
                 </div>
-                <div class="text-4xl font-extrabold text-text-color">
+                <div class="text-3xl md:text-4xl font-extrabold text-text-color">
                   {currentApartment.thongthuy}
                 </div>
               </div>
@@ -274,9 +274,9 @@
       <div class="flex justify-center mt-16">
         <a
           href="/mat-bang"
-          class="inline-flex items-center justify-center px-10 py-4 bg-accent text-black rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1"
+          class="btn btn-primary text-sm md:text-base px-6 md:px-10 lg:px-12 py-3 md:py-4"
         >
-          Xem Bản Vẽ Chi Tiết Tầng 02 & 03-30
+          Xem Bản Vẽ Chi Tiết
         </a>
       </div>
     {/if}

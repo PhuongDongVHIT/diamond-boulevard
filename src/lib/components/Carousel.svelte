@@ -88,15 +88,15 @@
           : 'opacity-0 translate-y-5 scale-95'}"
       >
         <h2
-          class="text-xl md:text-[1.25rem] uppercase tracking-[3px] text-accent mb-4 font-semibold"
+          class="text-sm md:text-base uppercase tracking-[3px] text-accent mb-3 md:mb-4 font-semibold"
         >
           {item.subtitle}
         </h2>
-        <h1 class="text-4xl md:text-[4rem] font-extrabold mb-8 leading-[1.1]">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 leading-[1.1]">
           {item.title}
         </h1>
         <button
-          class="px-10 py-4 rounded-full font-semibold uppercase tracking-wider text-[1.1rem] transition-all bg-accent text-black bg-white/60 backdrop-blur-2xl shadow-[0_4px_14px_rgba(239,101,34,0.3)] hover:bg-accent-hover hover:-translate-y-0.5 mt-4"
+          class="px-6 lg:px-8 py-3 lg:py-4 rounded-full font-semibold uppercase tracking-wider text-xs md:text-sm transition-all bg-accent text-white bg-white/20 backdrop-blur-2xl shadow-[0_4px_14px_rgba(0,0,0,0.3)] hover:bg-accent-hover hover:-translate-y-0.5 mt-2 lg:mt-4"
           >Liên hệ tư vấn</button
         >
       </div>

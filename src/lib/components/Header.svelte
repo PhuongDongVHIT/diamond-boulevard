@@ -31,39 +31,39 @@
       href="/"
       class="flex flex-col items-start gap-0 transition-transform duration-300 hover:opacity-80"
     >
-      <img src="/logo.png" class="w-12 h-full" alt="" srcset="" />
+      <img src="/logo.png" class="w-10 md:w-12 h-auto" alt="" srcset="" />
     </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-10">
       <a
         href="/tong-quan"
-        class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
+        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
         >Tổng Quan</a
       >
       <a
         href="/mat-bang"
-        class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
+        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
         >Mặt Bằng</a
       >
       <a
         href="/tien-ich"
-        class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
+        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
         >Tiện Ích</a
       >
       <a
         href="/tin-tuc"
-        class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
+        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
         >Tin tức</a
       >
       <a
         href="/thu-vien"
-        class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
+        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
         >Thư viện</a
       >
       <a
         href="/lien-he"
-        class="text-[0.9rem] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
+        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
         >Liên Hệ</a
       >
     </nav>
@@ -72,7 +72,7 @@
     <div class="hidden md:block">
       <a
         href="lien-he"
-        class="inline-flex items-center justify-center px-6 py-2.5 rounded-full font-semibold text-[0.85rem] tracking-wide transition-all duration-300 bg-text-color text-bg-color hover:scale-105 shadow-[0_4px_14px_rgba(0,0,0,0.1)]"
+        class="inline-flex items-center justify-center px-5 lg:px-6 py-2 md:py-2.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 bg-text-color text-bg-color hover:scale-105 shadow-[0_4px_14px_rgba(0,0,0,0.1)]"
       >
         Đăng ký tư vấn
       </a>
@@ -133,7 +133,7 @@
         onclick={() => (isMobileMenuOpen = false)}>Liên Hệ</a
       >
       <a
-        href="#"
+        href="/lien-he"
         class="mt-8 px-8 py-4 rounded-full font-bold text-lg bg-text-color text-bg-color"
         onclick={() => (isMobileMenuOpen = false)}
       >

@@ -20,12 +20,12 @@
   >
     <div class="max-w-[700px]">
       <h1
-        class="text-slate-50 mb-6 text-4xl md:text-[4.5rem] font-extrabold tracking-tight leading-[1.1]"
+        class="text-slate-50 mb-4 md:mb-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1]"
       >
         Căn Hộ Cao Cấp <br /><span class="text-accent">Mặt Tiền QL 13</span>
       </h1>
       <p
-        class="text-[1.25rem] mb-12 text-slate-300 max-w-[500px] leading-relaxed"
+        class="text-base md:text-lg lg:text-xl mb-8 md:mb-12 text-slate-300 max-w-[90%] md:max-w-[500px] leading-relaxed"
       >
         Trải nghiệm phong cách sống đô thị hiện đại và năng động, nơi mọi tiện
         nghi và kết nối giao thông đều nằm trong tầm tay của bạn.
@@ -59,13 +59,13 @@
           <input
             type="text"
             placeholder="Tìm theo vị trí, loại bất động sản hoặc ID"
-            class="w-full bg-transparent border-none text-white text-[1.1rem] outline-none font-sans placeholder-slate-400"
+            class="w-full bg-transparent border-none text-white text-sm md:text-base outline-none font-sans placeholder-slate-400"
             bind:value={searchQuery}
           />
         </div>
         <button
           type="submit"
-          class="px-8 py-4 text-[1.1rem] rounded-full font-semibold transition-all bg-accent text-white shadow-[0_4px_14px_rgba(239,101,34,0.3)] hover:bg-accent-hover hover:-translate-y-0.5 whitespace-nowrap"
+          class="px-6 md:px-8 py-3 md:py-4 text-sm md:text-base rounded-full font-semibold transition-all bg-accent text-white shadow-[0_4px_14px_rgba(239,101,34,0.3)] hover:bg-accent-hover hover:-translate-y-0.5 whitespace-nowrap"
           >Tìm Kiếm</button
         >
       </form>
