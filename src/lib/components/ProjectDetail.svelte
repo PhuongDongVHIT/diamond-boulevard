@@ -32,7 +32,8 @@
   >
     <!-- Left Content -->
     <div>
-      <h2
+      <div class="md:grid md:grid-cols-2">
+        <h2
         class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
       >
         Tổng Quan <span class="text-accent">Diamond Boulevard</span>
@@ -43,6 +44,7 @@
         TP.HCM, sở hữu vị trí chiến lược ngay mặt tiền Quốc lộ 13 — tuyến giao
         thông huyết mạch kết nối trực tiếp Bình Dương và trung tâm thành phố.
       </p>
+      
 
       <div class="space-y-5">
         {#each projectInfo as item}
@@ -61,6 +63,7 @@
         {/each}
       </div>
 
+      </div>
       <!-- Stats -->
     </div>
 

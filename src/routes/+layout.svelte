@@ -3,6 +3,7 @@
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import Contact from "$lib/components/Contact.svelte";
+    import FloatingNav from "$lib/components/FloatingNav.svelte";
 
   let { children } = $props();
 </script>
@@ -12,5 +13,6 @@
 <main class="bg-[#0a2d4f]">
   {@render children()}
 </main>
+<FloatingNav />
 <Contact />
 <Footer />

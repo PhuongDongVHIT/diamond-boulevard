@@ -69,17 +69,8 @@
   }
 </script>
 
-<section class="py-16 md:py-24 lg:py-32 bg-bg-color relative">
+<section class="py-12 md:py-16 bg-bg-color relative">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-        Mặt Bằng <span class="text-accent">Dự Án</span>
-      </h2>
-      <p class="text-base md:text-lg text-text-secondary mt-4">
-        Thiết kế thông minh tối ưu hóa không gian, 100% căn hộ đón ánh sáng tự
-        nhiên và luồng sinh khí.
-      </p>
-    </div>
 
     <div class="flex justify-center gap-4 mb-10">
       <button
