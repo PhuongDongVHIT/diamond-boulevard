@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { fadeUp } from '$lib/actions/gsap';
 
   const stats = [
     { label: 'Căn hộ', value: '683', unit: 'Căn' },
@@ -63,8 +62,7 @@
 
     <!-- Right Image -->
     <div
-      class="relative w-full h-full flex items-center justify-center min-h-[400px] lg:min-h-[600px] gsap-reveal"
-      use:fadeUp={{ x: 40, y: 0, duration: 1, delay: 0.2 }}
+      class="relative w-full h-full flex items-center justify-center min-h-[400px] lg:min-h-[600px]"
     >
       <div class="flex flex-col items-center">
             <div class="flex flex-wrap gap-10 pt-10 pb-2 text-center">
