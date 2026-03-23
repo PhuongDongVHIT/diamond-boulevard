@@ -11,7 +11,7 @@ const post = data.post;
   />
 </svelte:head>
 
-<section class="bg-white min-h-screen py-16">
+<section class="min-h-screen py-16">
   <div class="max-w-4xl mx-auto px-6">
 
     <img
