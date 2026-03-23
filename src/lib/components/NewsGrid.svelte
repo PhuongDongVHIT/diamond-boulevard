@@ -32,7 +32,7 @@
         <p class="text-slate-500 text-lg">Cập nhật thông tin dự án mới nhất</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {#each posts as post}
           <a href={`/tin-tuc/${post.slug}`} class="group block">
             <article
@@ -55,7 +55,7 @@
                 </h3>
 
                 <div
-                  class="flex items-center gap-2 text-orange-500 font-medium text-sm"
+                  class="flex items-center gap-2 text-white underline font-medium text-sm"
                 >
                   <span>Xem chi tiết</span>
                   <span class="transition group-hover:translate-x-1">→</span>

@@ -17,7 +17,7 @@ export const POST: RequestHandler = async ({ request }: any) => {
 
   await transporter.sendMail({
     from: body.email,
-    to: "yourmail@gmail.com",
+    to: "lecuong12091994@gmail.com",
     subject: "Khách hàng đăng ký Diamond Boulevard",
     html: `
       <h2>Thông tin khách hàng</h2>

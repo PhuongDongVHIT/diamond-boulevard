@@ -11,7 +11,7 @@
       <p class="text-slate-600">Thông tin dự án mới nhất</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       {#each posts as post}
         <a href={"/tin-tuc/" + post.slug}>
@@ -32,7 +32,7 @@
                 {@html post.excerpt.rendered}
               </div>
 
-              <span class="text-orange-500 font-semibold">
+              <span class="text-white underline font-semibold">
                 Xem chi tiết →
               </span>
             </div>

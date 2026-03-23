@@ -8,19 +8,19 @@
       id: 'facebook',
       icon: Facebook,
       color: '#1877f2',
-      href: 'https://facebook.com'
+      href: 'https://www.facebook.com/atskygardenlaithieu.com.vn'
     },
     {
       id: 'zalo',
       icon: MessageCircle,
       color: '#0068ff',
-      href: 'https://zalo.me'
+      href: 'https://zalo.me/0986639944'
     },
     {
       id: 'phone',
       icon: Phone,
       color: '#16a34a',
-      href: 'tel:0900000000'
+      href: 'tel:0986639944'
     }
   ];
 </script>
