@@ -73,10 +73,16 @@
   }
 </script>
 
-<section
-  class="relative py-16 md:py-16 min-h-[800px]"
->
+<section class="relative py-16 md:py-16 min-h-[800px]">
   <div class="max-w-8xl mx-auto px-6 md:px-8 relative z-10">
+    <div class="w-full">
+      <img
+        src="/le-van-cuong-cnkd-dxmd-vietnam.webp"
+        class="w-full object-cover"
+        alt=""
+        srcset=""
+      />
+    </div>
     <div
       class="flex flex-col lg:flex-row rounded-[1.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)] mb-16"
     >
@@ -121,7 +127,9 @@
 
       <!-- Right -->
       <div class="flex-[1.2] py-16 px-8 md:px-12 bg-white/20 backdrop-blur-2xl">
-        <h3 class="text-2xl font-extrabold font-playfair text-center mb-8 uppercase">
+        <h3
+          class="text-2xl font-extrabold font-playfair text-center mb-8 uppercase"
+        >
           LIÊN HỆ TƯ VẤN
         </h3>
 
