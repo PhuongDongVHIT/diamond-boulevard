@@ -22,7 +22,7 @@
 
 <section class="py-12 md:py-16">
   <div class="max-w-8xl mx-auto px-6 lg:px-10">
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="text-center mb-16">
         <h1
           class="text-4xl md:text-6xl font-playfair italic font-bold tracking-tight mb-4"
