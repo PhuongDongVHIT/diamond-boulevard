@@ -7,6 +7,10 @@
   import PaymentMethods from "$lib/components/PaymentMethods.svelte";
   import LegalGallery from "$lib/components/LegalGallery.svelte";
   import Seo from "$lib/actions/seo.svelte";
+  import NewsGrid from "$lib/components/NewsGrid.svelte";
+
+  const { data } = $props();
+  const posts = data.posts;
 </script>
 
 <Seo
@@ -16,12 +20,13 @@
   image="https://diamondboulevard.example.com/images/gioi-thieu-banner.jpg"
 />
 
-<main class="relative w-full overflow-x-hidden pt-24">
+<main class="relative w-full overflow-x-hidden">
   <div id="section-1"><Carousel /></div>
   <div id="section-2"><ProjectDetail /></div>
-  <div id="section-5"><LocationMap /></div>
+  <div id="section-3"><LocationMap /></div>
   <div id="section-4"><FloorPlan showCta={true} /></div>
-  <div id="section-3"><Amenities showCta={true} /></div>
-  <div id="payment"><PaymentMethods /></div>
-  <div id="payment"><LegalGallery /></div>
+  <div id="section-5"><Amenities showCta={true} /></div>
+  <div id="section-6"><PaymentMethods /></div>
+  <div id="section-7"><NewsGrid {posts} /></div>
+  <div id="section-8"><LegalGallery /></div>
 </main>

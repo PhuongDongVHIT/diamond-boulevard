@@ -40,7 +40,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
       {#each services as service}
         <div
-          class="p-8 md:p-12 rounded-[1.5rem] transition-all duration-300 flex flex-col h-full border border-border-color bg-gradient-to-br from-bg-color to-bg-secondary hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-accent-light"
+          class="p-8 md:p-12 rounded-[1.5rem] transition-all duration-300 flex flex-col h-full border  bg-gradient-to-br from-bg-color to-bg-secondary hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-accent-light"
         >
           <div
             class="w-16 h-16 bg-accent text-white rounded-2xl flex items-center justify-center mb-8 shadow-[0_10px_20px_var(--accent-light)]"
@@ -91,7 +91,7 @@
               >
             {/if}
           </div>
-          <h3 class="text-2xl font-bold mb-4 text-text-color">
+          <h3 class="text-2xl font-bold mb-4 ">
             {service.title}
           </h3>
           <p

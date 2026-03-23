@@ -43,7 +43,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
       {#each testimonials as item}
         <div
-          class=" p-10 md:p-12 rounded-[1.5rem] shadow-[0_4px_30px_rgba(0,0,0,0.05)] relative border border-border-color transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,0,0,0.06)]"
+          class=" p-10 md:p-12 rounded-[1.5rem] shadow-[0_4px_30px_rgba(0,0,0,0.05)] relative border  transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,0,0,0.06)]"
         >
           <div
             class="absolute -top-5 left-8 md:left-12 text-[5rem] leading-none font-serif text-white-light font-bold select-none"
@@ -55,11 +55,11 @@
               <span>★</span>
             {/each}
           </div>
-          <p class="text-[1.1rem] leading-relaxed text-text-color mb-10 italic">
+          <p class="text-[1.1rem] leading-relaxed  mb-10 italic">
             {item.quote}
           </p>
           <div
-            class="flex items-center gap-5 border-t border-border-color pt-6"
+            class="flex items-center gap-5 border-t  pt-6"
           >
             <div
               class="min-w-12 w-12 h-12 rounded-full bg-accent-light text-white flex items-center justify-center font-bold text-[1.2rem]"
@@ -67,7 +67,7 @@
               {item.author.charAt(0)}
             </div>
             <div>
-              <h4 class="m-0 text-[1.1rem] font-bold text-text-color">
+              <h4 class="m-0 text-[1.1rem] font-bold ">
                 {item.author}
               </h4>
               <p class="m-0 text-[0.9rem] text-text-secondary">{item.title}</p>

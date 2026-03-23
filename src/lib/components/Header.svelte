@@ -1,140 +1,99 @@
 <script lang="ts">
-  import { fade } from "svelte/transition";
+  import { fade, fly } from 'svelte/transition';
 
   let isScrolled = $state(false);
   let isMobileMenuOpen = $state(false);
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", () => {
-      isScrolled = window.scrollY > 40;
-    });
-  }
+  const menuItems = [
+    { label: 'Tổng Quan', href: '/tong-quan' },
+    { label: 'Mặt Bằng', href: '/mat-bang' },
+    { label: 'Tiện Ích', href: '/tien-ich' },
+    { label: 'Tin tức', href: '/tin-tuc' },
+    { label: 'Thư viện', href: '/thu-vien' },
+    { label: 'Liên Hệ', href: '/lien-he' }
+  ];
 
-  function formatMenuText(text: string) {
-    return text;
+  function handleScroll() {
+    isScrolled = window.scrollY > 40;
   }
 </script>
 
+<svelte:window on:scroll={handleScroll} />
 <header
-  class="fixed top-0 left-0 w-full z-[1000] px-4 md:px-8 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] {isScrolled
-    ? 'top-4 md:top-6'
-    : 'top-4'}"
+  class="fixed top-0 left-0 w-full z-[1000] px-4 md:px-8 transition-all duration-700 font-playfair
+  {isScrolled ? 'top-4 md:top-6' : 'top-4'}"
 >
-  <!-- Dynamic Island / Floating Pill Container -->
   <div
-    class="mx-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] {isScrolled
-      ? 'max-w-4xl rounded-full glass'
-      : 'max-w-7xl rounded-[2rem] bg-transparent'} relative flex justify-between items-center py-4 px-6 md:px-8"
+    class="mx-auto transition-all duration-700
+    {isScrolled
+      ? 'max-w-4xl rounded-full glass shadow-xl py-2'
+      : 'max-w-8xl rounded-[2rem] bg-transparent'}
+    relative flex justify-between items-center py-2 px-6 md:px-8"
   >
     <!-- Logo -->
-    <a
-      href="/"
-      class="flex flex-col items-start gap-0 transition-transform duration-300 hover:opacity-80"
-    >
-      <img src="/logo.png" class="w-10 md:w-12 h-auto" alt="" srcset="" />
+    <a href="/" class="flex items-center gap-3">
+      <img src="/logo.png" class="w-8 md:w-10" alt="logo" />
     </a>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center gap-10">
-      <a
-        href="/tong-quan"
-        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
-        >Tổng Quan</a
-      >
-      <a
-        href="/mat-bang"
-        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
-        >Mặt Bằng</a
-      >
-      <a
-        href="/tien-ich"
-        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
-        >Tiện Ích</a
-      >
-      <a
-        href="/tin-tuc"
-        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
-        >Tin tức</a
-      >
-      <a
-        href="/thu-vien"
-        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
-        >Thư viện</a
-      >
-      <a
-        href="/lien-he"
-        class="text-sm lg:text-[15px] font-medium text-text-color/80 hover:text-text-color transition-colors tracking-wide"
-        >Liên Hệ</a
-      >
+    <!-- Desktop -->
+    <nav class="hidden md:flex items-center gap-8">
+      {#each menuItems as item}
+        <a
+          href={item.href}
+          class="text-sm md:text-base font-medium tracking-wide hover:text-orange-500 transition"
+        >
+          {item.label}
+        </a>
+      {/each}
     </nav>
 
-    <!-- Call to Action -->
+    <!-- CTA -->
     <div class="hidden md:block">
       <a
-        href="lien-he"
-        class="inline-flex items-center justify-center px-5 lg:px-6 py-2 md:py-2.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 bg-text-color text-bg-color hover:scale-105 shadow-[0_4px_14px_rgba(0,0,0,0.1)]"
+        href="/lien-he"
+        class="px-5 py-2 rounded-full bg-text-color text-bg-color font-semibold text-sm hover:scale-105 transition"
       >
         Đăng ký tư vấn
       </a>
     </div>
 
-    <!-- Mobile Menu Toggle -->
+    <!-- Mobile Toggle -->
     <button
-      class="md:hidden flex flex-col justify-center items-center w-8 h-8 focus:outline-none z-[1001]"
+      class="md:hidden w-11 h-11 rounded-full bg-white/90 shadow-lg flex items-center justify-center"
       onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
-      aria-label="Toggle Menu"
+      aria-label="Toggle menu"
     >
-      <span
-        class="w-6 h-0.5 bg-text-color transition-all duration-300 ease-out {isMobileMenuOpen
-          ? 'rotate-45 translate-y-1.5'
-          : '-translate-y-1'}"
-      ></span>
-      <span
-        class="w-6 h-0.5 bg-text-color transition-all duration-300 ease-out {isMobileMenuOpen
-          ? 'opacity-0'
-          : 'opacity-100'}"
-      ></span>
-      <span
-        class="w-6 h-0.5 bg-text-color transition-all duration-300 ease-out {isMobileMenuOpen
-          ? '-rotate-45 -translate-y-1.5'
-          : 'translate-y-1'}"
-      ></span>
+      <div class="relative w-6 h-5">
+        <span class="absolute left-0 top-0 w-full h-0.5 bg-black transition {isMobileMenuOpen ? 'rotate-45 top-2' : ''}"></span>
+        <span class="absolute left-0 top-2 w-full h-0.5 bg-black transition {isMobileMenuOpen ? 'opacity-0' : ''}"></span>
+        <span class="absolute left-0 top-4 w-full h-0.5 bg-black transition {isMobileMenuOpen ? '-rotate-45 top-2' : ''}"></span>
+      </div>
     </button>
   </div>
 </header>
 
-<!-- Mobile Menu Overlay -->
 {#if isMobileMenuOpen}
-  <div class="fixed inset-0 z-[999] glass" transition:fade={{ duration: 300 }}>
-    <div class="flex flex-col items-center justify-center h-full w-full gap-8">
-      <a
-        href="/"
-        class="text-3xl font-bold tracking-tight text-text-color"
-        onclick={() => (isMobileMenuOpen = false)}>Tổng Quan</a
-      >
-      <a
-        href="/tong-quan"
-        class="text-3xl font-bold tracking-tight text-white"
-        onclick={() => (isMobileMenuOpen = false)}>Tổng quan</a
-      >
-      <a
-        href="/mat-bang"
-        class="text-3xl font-bold tracking-tight text-text-color"
-        onclick={() => (isMobileMenuOpen = false)}>Mặt Bằng</a
-      >
-      <a
-        href="/tien-ich"
-        class="text-3xl font-bold tracking-tight text-text-color"
-        onclick={() => (isMobileMenuOpen = false)}>Tiện Ích</a
-      >
+  <div
+    class="fixed inset-0 z-[999] bg-black/70 backdrop-blur-xl"
+    transition:fade
+  >
+    <div
+      class="flex flex-col justify-center items-center h-full gap-8"
+      transition:fly={{ y: -20, duration: 400 }}
+    >
+      {#each menuItems as item}
+        <a
+          href={item.href}
+          class="text-3xl font-semibold text-white hover:text-orange-400 transition"
+          onclick={() => (isMobileMenuOpen = false)}
+        >
+          {item.label}
+        </a>
+      {/each}
+
       <a
         href="/lien-he"
-        class="text-3xl font-bold tracking-tight text-text-color"
-        onclick={() => (isMobileMenuOpen = false)}>Liên Hệ</a
-      >
-      <a
-        href="/lien-he"
-        class="mt-8 px-8 py-4 rounded-full font-bold text-lg bg-text-color text-bg-color"
+        class="mt-6 px-8 py-4 rounded-full bg-white text-black font-bold"
         onclick={() => (isMobileMenuOpen = false)}
       >
         Đăng ký tư vấn

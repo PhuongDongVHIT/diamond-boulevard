@@ -25,37 +25,16 @@
 </svelte:head>
 
 <!-- Page Header Overlay -->
-<section class="relative pt-32 pb-20 bg-slate-900 overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <div
-      class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent z-10"
-    ></div>
-    <div
-      class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,101,34,0.15)_0%,transparent_50%)] z-10"
-    ></div>
-  </div>
+<section class="relative py-12 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-20 text-center">
-    <nav
-      class="flex justify-center text-xs md:text-sm font-medium text-amber-300 mb-6 uppercase tracking-wider"
-    >
-      <a href="/" class="hover:text-white transition-colors">Trang Chủ</a>
-      <span class="mx-2 opacity-50">/</span>
-      <span class="text-white">Mặt Bằng</span>
-    </nav>
     <h1
-      class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase mb-6 drop-shadow-lg leading-tight"
+      class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase mb-6 drop-shadow-lg"
     >
-      Mặt Bằng <span
-        class="text-white underline decoration-4 underline-offset-8"
-        >Kiến Trúc</span
+      Mặt Bằng <br> <span
+        class="font-playfair italic"
+        >Dianmond Boulevard</span
       >
     </h1>
-    <p
-      class="text-base md:text-[1.15rem] lg:text-[1.25rem] text-slate-300 max-w-2xl mx-auto leading-relaxed"
-    >
-      Thiết kế tối ưu hóa gió lùa và ánh sáng tự nhiên. Mọi căn hộ tại Diamond
-      Boulevard đều thỏa mãn những tiêu chuẩn khắt khe nhất về công thái học.
-    </p>
   </div>
 </section>
 
@@ -67,7 +46,7 @@
       <div class="flex flex-col md:flex-row gap-12 items-center">
         <div class="md:w-1/3">
           <h2
-            class="text-4xl font-extrabold text-text-color uppercase tracking-tight mb-6 border-l-4 border-accent pl-4"
+            class="text-4xl font-extrabold  uppercase tracking-tight mb-6 border-l-4 border-accent pl-4"
           >
             Mặt Bằng<br />Tầng 02
           </h2>
@@ -80,7 +59,7 @@
             hưởng sự yên tĩnh và dễ dàng tiếp cận ngay lập tức với các tiện ích
             khối đế tiện lợi.
           </p>
-          <ul class="space-y-3 font-medium text-text-color/80">
+          <ul class="space-y-3 font-medium /80">
             <li class="flex items-center gap-2">
               <span class="w-3 h-3 rounded-full bg-yellow-400"></span> Studio (CH-07)
             </li>
@@ -125,7 +104,7 @@
       <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
         <div class="md:w-1/3">
           <h2
-            class="text-4xl font-extrabold text-text-color uppercase tracking-tight mb-6 border-l-4 border-accent pl-4"
+            class="text-4xl font-extrabold  uppercase tracking-tight mb-6 border-l-4 border-accent pl-4"
           >
             Mặt Bằng<br />Tầng 03 - 30
           </h2>
@@ -167,9 +146,9 @@
 <FloorPlanComponent />
 
 <!-- SEO Content Block for Conversion -->
-<section class="py-24 bg-bg-secondary border-t border-border-color">
+<section class="py-24 bg-bg-secondary border-t ">
   <div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
-    <h2 class="text-3xl font-bold text-text-color mb-6">
+    <h2 class="text-3xl font-bold  mb-6">
       Liên Hệ Để Nhận Bảng Giá Chi Tiết
     </h2>
     <p class="text-lg text-text-secondary leading-relaxed mb-10">

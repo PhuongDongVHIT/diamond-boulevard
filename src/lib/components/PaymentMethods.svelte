@@ -13,25 +13,25 @@
       key: "hotrolaisuat",
       title: "PHƯƠNG THỨC THANH TOÁN HỖ TRỢ LÃI SUẤT",
       discount: "CHIẾT KHẤU 1%",
-      img: "/images/diamond-boulecvard-phuong-thuc-thanh-toan-1.webp",
+      img: "/images/diamond-boulecvard-phuong-thuc-thanh-toan-3.webp",
     },
     {
       key: "giaingansongsong",
       title: "PHƯƠNG THỨC THANH TOÁN",
       discount: "GIẢI NGÂN SONG SONG",
-      img: "/images/diamond-boulecvard-phuong-thuc-thanh-toan-2.webp",
+      img: "/images/diamond-boulecvard-phuong-thuc-thanh-toan-4.webp",
     },
     {
       key: "chiadeu",
       title: "PHƯƠNG THỨC THANH TOÁN",
       discount: "1% MỖI THÁNG",
-      img: "/images/diamond-boulecvard-phuong-thuc-thanh-toan-3.webp",
+      img: "/images/diamond-boulecvard-phuong-thuc-thanh-toan-2.webp",
     },
     {
       key: "chuan",
       title: "PHƯƠNG THỨC THANH TOÁN CHUẨN",
       discount: "CHIẾT KHẤU 2%",
-      img: "/images/diamond-boulecvard-phuong-thuc-thanh-toan-4.webp",
+      img: "/images/diamond-boulecvard-phuong-thuc-thanh-toan-1.webp",
     },
   ];
 
@@ -42,16 +42,16 @@
   );
 </script>
 
-<section class="py-16 md:py-24 lg:py-32 relative overflow-hidden" id="payment">
-  <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-20">
-    <div class="text-center mb-12 md:mb-16">
+<section class="py-12 md:py-16 relative overflow-hidden" id="payment">
+  <div class="max-w-8xl mx-auto px-4 md:px-8 relative z-20">
+    <div class="text-center mb-4 md:mb-8 font-playfair italic">
       <p
-        class="text-2xl sm:text-3xl md:text-4xl font-signature text-text-color mb-[-10px] md:mb-[-15px] italic"
+        class="text-2xl sm:text-3xl md:text-4xl font-signature md:pb-2 italic"
       >
         Phương thức
       </p>
       <h2
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase text-white drop-shadow-[0_0_15px_rgba(197,160,89,0.3)]"
+        class="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight uppercase text-white drop-shadow-[0_0_15px_rgba(197,160,89,0.3)]"
       >
         Thanh Toán
       </h2>
@@ -61,19 +61,19 @@
     <div class="flex flex-wrap justify-center gap-4 mb-8">
       {#each methods as method}
         <button
-          class="px-6 md:px-8 py-3 md:py-4 rounded-full font-bold uppercase tracking-wider text-xs md:text-sm transition-all duration-300
+          class="px-4 md:px-8 py-2 md:py-4 rounded-full font-bold uppercase tracking-wider text-2xs md:text-sm transition-all duration-300
           {activeTab === method.key
             ? 'bg-accent text-bg-color shadow-[0_0_30px_rgba(197,160,89,0.4)] scale-105'
-            : 'bg-text-color/5 text-text-color hover:bg-text-color/10 border border-border-color'}"
+            : 'bg-text-color/5  hover:bg-text-color/10 border '}"
           onclick={() => (activeTab = method.key)}
         >
-          {method.title}
+          {method.discount}
         </button>
       {/each}
     </div>
 
     <!-- Content -->
-    <div class="p-8 md:p-4 relative min-h-[400px] flex flex-col justify-center">
+    <div class="w-full md:px-4 relative flex flex-col justify-center">
       {#key activeTab}
         <div class="w-full relative py-2" in:fade={{ duration: 400 }}>
           <div

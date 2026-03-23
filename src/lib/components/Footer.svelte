@@ -1,13 +1,19 @@
-<footer class="bg-bg-secondary border-t border-border-color pt-16 md:pt-24 pb-8 mt-12 md:mt-24">
+<footer class="pt-12 md:pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-6 md:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 mb-12 md:mb-16">
+    <div
+      class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 mb-12 md:mb-16"
+    >
       <div class="md:col-span-5 lg:col-span-4">
-        <a href="/" class="text-xl md:text-2xl font-extrabold text-text-color">
+        <a
+          href="/"
+          class="text-xl md:text-2xl font-extrabold font-playfair italic"
+        >
           <span class="text-white">Diamond</span> Boulevard
         </a>
         <p class="mt-4 text-text-secondary max-w-xs text-sm">
-          Dự án phức hợp căn hộ thương mại cao cấp, biểu tượng sống mới trên mặt
-          tiền lộ 13 hướng biển Sân Golf và Landmark 81.
+          CĂN HỘ MẶT TIỀN QL13 <br />
+          CẠNH AEON MALL - NGAY LÕI KHU CÔNG NGHIỆP<br />
+          Chỉ từ 36 Triệu /m²
         </p>
       </div>
 
@@ -15,7 +21,9 @@
         class="md:col-span-7 lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8"
       >
         <div>
-          <h3 class="text-base md:text-lg font-bold text-text-color mb-4 md:mb-6">Bất động sản</h3>
+          <h3 class="text-base md:text-lg font-bold mb-4 md:mb-6">
+            Bất động sản
+          </h3>
           <ul class="space-y-3">
             <li>
               <a
@@ -49,7 +57,7 @@
         </div>
 
         <div>
-          <h3 class="text-base md:text-lg font-bold text-text-color mb-4 md:mb-6">Dự án</h3>
+          <h3 class="text-base md:text-lg font-bold mb-4 md:mb-6">Dự án</h3>
           <ul class="space-y-3">
             <li>
               <a
@@ -111,7 +119,7 @@
         </div>
 
         <div>
-          <h3 class="text-base md:text-lg font-bold text-text-color mb-4 md:mb-6">Pháp lý</h3>
+          <h3 class="text-base md:text-lg font-bold mb-4 md:mb-6">Pháp lý</h3>
           <ul class="space-y-3">
             <li>
               <a
@@ -138,9 +146,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="border-t border-border-color pt-8 text-center text-text-secondary text-sm"
-    >
+    <div class="border-t pt-8 text-center text-text-secondary text-sm">
       <p>
         &copy; {new Date().getFullYear()} Diamond Boulevard. Đã đăng ký Bản quyền.
       </p>

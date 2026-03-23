@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
 @import "tailwindcss";
@@ -9,7 +10,8 @@
     --bg-secondary: #ffffff;
     --text-color: #fff;
     --text-secondary: #64748b;
-    --accent-color: #c5a059; /* Classic Gold */
+    --accent-color: #c5a059;
+    /* Classic Gold */
     --accent-hover: #b08d4b;
     --accent-light: rgba(197, 160, 89, 0.1);
     --border-color: rgba(30, 41, 59, 0.08);
@@ -46,7 +48,8 @@
       --bg-secondary: #0f172a;
       --text-color: #f8fafc;
       --text-secondary: #94a3b8;
-      --accent-color: #d4af37; /* Brighter gold for dark mode */
+      --accent-color: #d4af37;
+      /* Brighter gold for dark mode */
       --accent-hover: #c5a059;
       --accent-light: rgba(212, 175, 55, 0.15);
       --border-color: rgba(255, 255, 255, 0.12);
@@ -55,6 +58,21 @@
       --glass-border: rgba(255, 255, 255, 0.08);
       --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     }
+  }
+}
+
+@theme {
+  --font-playfair: "Playfair Display", serif;
+  --container-8xl: 90rem;
+  /* 1440px */
+  --container-9xl: 100rem;
+  /* 1600px */
+}
+
+@layer utilities {
+  .text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.875rem;
   }
 }
 
@@ -174,4 +192,9 @@
     font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: -0.01em;
   }
+}
+
+body {
+  background-color: #0a2d4f;
+  font-family: math, 'Arial Narrow', Arial, sans-serif;
 }

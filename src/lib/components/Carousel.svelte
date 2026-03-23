@@ -69,10 +69,10 @@
   });
 </script>
 
-<div class="relative w-screen h-screen overflow-hidden ">
+<div class="relative w-screen h-[80vh] md:h-screen overflow-hidden ">
   {#each items as item, i}
     <div
-      class="absolute inset-0 w-screen h-screen bg-cover bg-center flex items-end justify-center transition-opacity duration-1000 ease-in-out {i ===
+      class="absolute inset-0 w-screen h-[80vh] md:h-screen bg-cover bg-center flex items-end justify-center transition-opacity duration-1000 ease-in-out {i ===
       currentIndex
         ? 'opacity-100 z-10'
         : 'opacity-0 z-0 pointer-events-none'}"
@@ -142,18 +142,5 @@
         ><polyline points="9 18 15 12 9 6"></polyline></svg
       >
     </button>
-  </div>
-
-  <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-4 z-30">
-    {#each items as _, i}
-      <button
-        class="w-3 h-3 rounded-full border-2 transition-all p-0 cursor-pointer {i ===
-        currentIndex
-          ? 'bg-white border-white scale-125'
-          : 'bg-transparent border-white/50'}"
-        onclick={() => goTo(i)}
-        aria-label="Go to slide {i + 1}"
-      ></button>
-    {/each}
   </div>
 </div>

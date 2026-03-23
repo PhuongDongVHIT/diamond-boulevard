@@ -32,19 +32,19 @@
 </script>
 
 <section class="pt-20">
-  <div class="max-w-7xl mx-auto px-4 py-10">
-    <h2 class="text-3xl font-bold mb-8 text-center">Thư viện hình ảnh</h2>
+  <div class="max-w-8xl mx-auto px-4 py-10">
+    <h2 class="text-4xl md:text-6xl font-bold font-playfair italic mb-8 text-center">Thư viện hình ảnh Diamond Boulevard</h2>
 
     <!-- Tabs -->
     <div class="flex flex-wrap justify-center gap-3 mb-10">
       {#each tabs as t}
         <button
           onclick={() => (active = t.key)}
-          class={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
+          class={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-2xl
         ${
           active === t.key
             ? "bg-black text-white scale-105"
-            : "bg-gray-100 hover:bg-gray-200"
+            : "bg-gray-100/60 text-black hover:bg-gray-200"
         }`}
         >
           {t.label}

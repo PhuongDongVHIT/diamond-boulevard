@@ -74,18 +74,18 @@
 </script>
 
 <section
-  class="relative py-16 md:py-24 lg:py-32 min-h-[800px] bg-center bg-cover bg-no-repeat"
+  class="relative py-16 md:py-16 min-h-[800px]"
 >
-  <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+  <div class="max-w-8xl mx-auto px-6 md:px-8 relative z-10">
     <div
       class="flex flex-col lg:flex-row rounded-[1.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)] mb-16"
     >
       <!-- Left -->
       <div
-        class="flex-1 bg-accent text-bg-color py-12 md:py-16 px-6 md:px-12 flex flex-col"
+        class="flex-1 text-bg-color py-12 md:py-16 px-6 md:px-12 flex flex-col"
       >
         <h2
-          class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.1] mb-8 md:mb-12 uppercase"
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.1] mb-8 md:mb-12 uppercase font-playfair"
         >
           Diamond Boulevard
         </h2>
@@ -103,7 +103,7 @@
 
           <div class="flex items-start gap-4 text-sm md:text-base font-medium">
             <span class="text-xl">✉️</span>
-            <p>info@diamondboulevard.io.vn</p>
+            <p>info@diamondboulevard.xyz</p>
           </div>
         </div>
 
@@ -120,8 +120,8 @@
       </div>
 
       <!-- Right -->
-      <div class="flex-[1.2] py-16 px-8 md:px-12 bg-white/85 backdrop-blur-xl">
-        <h3 class="text-2xl font-extrabold text-center mb-8 uppercase">
+      <div class="flex-[1.2] py-16 px-8 md:px-12 bg-white/20 backdrop-blur-2xl">
+        <h3 class="text-2xl font-extrabold font-playfair text-center mb-8 uppercase">
           LIÊN HỆ TƯ VẤN
         </h3>
 

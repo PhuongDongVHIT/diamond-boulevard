@@ -54,7 +54,7 @@
       {#each markets as market}
         <a
           href={`/markets/${market.id}`}
-          class="relative h-[380px] rounded-[1.5rem] overflow-hidden no-underline text-white flex flex-col justify-end p-10 shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-border-color bg-text-color group"
+          class="relative h-[380px] rounded-[1.5rem] overflow-hidden no-underline text-white flex flex-col justify-end p-10 shadow-[0_10px_30px_rgba(0,0,0,0.05)] border  bg-text-color group"
           style="--gradient-start: {market.colorStart}; --gradient-end: {market.colorEnd};"
         >
           <div

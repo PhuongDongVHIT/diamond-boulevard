@@ -48,8 +48,8 @@
     {
       id: "3pn",
       name: "Căn hộ 3PN",
-      timtuong: "84.14 m²",
-      thongthuy: "76.12 m²",
+      timtuong: "82.30 m²",
+      thongthuy: "74.61 m²",
       image: "/images/can-ho-diamond-boulevard-can-ho-18.webp",
     },
   ];
@@ -69,15 +69,21 @@
   }
 </script>
 
-<section class="py-12 md:py-16  relative">
-  <div class="max-w-7xl mx-auto px-6 md:px-8">
-
+<section class="py-12 md:py-16 relative">
+  <div class="max-w-8xl mx-auto px-6 md:px-8">
+    <div class="pb-4 md:pb-8">
+      <h2
+        class="text-3xl sm:text-4xl md:text-6xl font-extrabold italic tracking-tight leading-tight font-playfair text-center"
+      >
+        Mặt bằng <br /> Diamond Boulevard
+      </h2>
+    </div>
     <div class="flex justify-center gap-4 mb-10">
       <button
         class="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base rounded-full font-bold transition-all shadow-sm {activeMainTab ===
         'floor'
           ? 'bg-accent text-white shadow-[0_4px_15px_rgba(239,101,34,0.3)]'
-          : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}"
+          : 'bg-white/50 text-black hover:bg-white dark:hover:bg-slate-800'}"
         onclick={() => (activeMainTab = "floor")}
       >
         Mặt Bằng Tầng
@@ -86,16 +92,14 @@
         class="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base rounded-full font-bold transition-all shadow-sm {activeMainTab ===
         'apartment'
           ? 'bg-accent text-white shadow-[0_4px_15px_rgba(239,101,34,0.3)]'
-          : 'bg-white/50 dark:bg-slate-800/50 text-text-secondary hover:bg-white dark:hover:bg-slate-800 hover:text-text-color'}"
+          : 'bg-white/50 dark:bg-slate-800/50 text-black hover:bg-white dark:hover:bg-slate-800'}"
         onclick={() => (activeMainTab = "apartment")}
       >
         Thiết Kế Căn Hộ
       </button>
     </div>
 
-    <div
-      class="bg-white/70 dark:bg-slate-900/75 backdrop-blur-md rounded-[1.5rem] p-4 md:p-8 border border-border-color shadow-lg min-h-[600px]"
-    >
+    <div class="md:min-h-[600px]">
       {#if activeMainTab === "floor"}
         <div
           class="flex justify-center gap-2 mb-6 flex-wrap"
@@ -106,7 +110,7 @@
               class="px-6 py-2 rounded-lg font-semibold transition-colors {activeFloor ===
               plan.id
                 ? 'bg-bg-secondary text-white border border-accent/20 shadow-sm'
-                : 'text-text-secondary hover:text-text-color'}"
+                : 'text-text-secondary hover:'}"
               onclick={() => (activeFloor = plan.id)}
             >
               {plan.name}
@@ -115,7 +119,7 @@
         </div>
 
         <div
-          class="w-full bg-slate-50 dark:bg-slate-800/50 rounded-xl overflow-hidden min-h-[400px] flex items-center justify-center relative border border-border-color p-4"
+          class="w-full overflow-hidden md:min-h-[400px] flex items-center justify-center relative"
         >
           {#key activeFloor}
             <div
@@ -131,7 +135,7 @@
               />
               <!-- Placeholder if image not found -->
               <div
-                class="hidden flex-col items-center justify-center p-20 text-text-secondary border-2 border-dashed border-border-color rounded-xl w-full max-w-2xl"
+                class="hidden flex-col items-center justify-center p-20 text-text-secondary border-2 border-dashed rounded-xl w-full max-w-2xl"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +170,7 @@
               class="px-6 py-2 rounded-lg font-semibold transition-colors {activeApartment ===
               apt.id
                 ? 'bg-bg-secondary text-white border border-accent/20 shadow-sm'
-                : 'text-text-secondary hover:text-text-color'}"
+                : 'text-text-secondary hover:'}"
               onclick={() => (activeApartment = apt.id)}
             >
               {apt.name}
@@ -176,11 +180,9 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div
-            class="col-span-1 flex flex-col justify-center bg-bg-secondary p-8 rounded-xl border border-border-color shadow-[inset_0_2px_10px_rgba(0,0,0,0.02)]"
+            class="col-span-1 flex flex-col justify-center bg-bg-secondary p-8"
           >
-            <h3
-              class="text-2xl font-bold text-text-color mb-8 pb-4 border-b border-border-color"
-            >
+            <h3 class="text-2xl font-bold mb-8 pb-4 border-b">
               {currentApartment.name}
             </h3>
 
@@ -202,21 +204,23 @@
                 >
                   Diện tích thông thủy
                 </div>
-                <div class="text-3xl md:text-4xl font-extrabold text-text-color">
+                <div class="text-3xl md:text-4xl font-extrabold">
                   {currentApartment.thongthuy}
                 </div>
               </div>
             </div>
 
-            <button
-              class="mt-12 w-full py-4 rounded-xl font-bold bg-white dark:bg-slate-800 border border-border-color text-text-color hover:bg-accent hover:text-white hover:border-accent transition-colors shadow-sm"
-            >
-              Nhận Báo Giá Chi Tiết
-            </button>
+            <a href="/lien-he">
+              <button
+                class="mt-12 w-full py-4 rounded-xl font-bold bg-white dark:bg-slate-800 border hover:bg-accent text-black hover:border-accent transition-colors shadow-sm"
+              >
+                Nhận Báo Giá Chi Tiết
+              </button>
+            </a>
           </div>
 
           <div
-            class="col-span-1 lg:col-span-2 bg-slate-50 dark:bg-slate-800/50 rounded-xl overflow-hidden min-h-[400px] flex items-center justify-center relative border border-border-color p-6"
+            class="col-span-1 lg:col-span-2 bg-slate-50 dark:bg-slate-800/50 rounded-xl overflow-hidden min-h-[400px] flex items-center justify-center relative border p-6"
           >
             {#key activeApartment}
               <div
@@ -227,12 +231,12 @@
                 <img
                   src={currentApartment.image}
                   alt={currentApartment.name}
-                  class="max-w-full max-h-[70vh] object-contain rounded-lg drop-shadow-sm"
+                  class="max-w-full max-h-[70vh] object-contain"
                   onerror={handleImageError}
                 />
                 <!-- Placeholder if image not found -->
                 <div
-                  class="hidden flex-col items-center justify-center p-20 text-text-secondary border-2 border-dashed border-border-color rounded-xl w-full h-full min-h-[300px]"
+                  class="hidden flex-col items-center justify-center p-20 text-text-secondary border-2 border-dashed rounded-xl w-full h-full min-h-[300px]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

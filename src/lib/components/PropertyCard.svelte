@@ -3,7 +3,7 @@
 </script>
 
 <article
-  class=" rounded-[1.5rem] overflow-hidden transition-all duration-300 border border-border-color shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] group"
+  class=" rounded-[1.5rem] overflow-hidden transition-all duration-300 border  shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] group"
 >
   <div class="relative aspect-[4/3] overflow-hidden">
     <img
@@ -27,7 +27,7 @@
 
   <div class="p-6">
     <h3
-      class="text-xl font-bold mb-2 whitespace-nowrap overflow-hidden text-ellipsis text-text-color"
+      class="text-xl font-bold mb-2 whitespace-nowrap overflow-hidden text-ellipsis "
     >
       {property.title}
     </h3>
@@ -52,10 +52,10 @@
     </p>
 
     <div
-      class="flex justify-between items-center pb-6 mb-6 border-b border-border-color"
+      class="flex justify-between items-center pb-6 mb-6 border-b "
     >
       <div class="flex flex-col items-center">
-        <span class="font-extrabold text-[1.1rem] text-text-color"
+        <span class="font-extrabold text-[1.1rem] "
           >{property.beds}</span
         >
         <span class="text-[0.8rem] text-text-secondary uppercase tracking-wider"
@@ -64,7 +64,7 @@
       </div>
       <div class="w-px h-6 bg-border-color"></div>
       <div class="flex flex-col items-center">
-        <span class="font-extrabold text-[1.1rem] text-text-color"
+        <span class="font-extrabold text-[1.1rem] "
           >{property.baths}</span
         >
         <span class="text-[0.8rem] text-text-secondary uppercase tracking-wider"
@@ -73,7 +73,7 @@
       </div>
       <div class="w-px h-6 bg-border-color"></div>
       <div class="flex flex-col items-center">
-        <span class="font-extrabold text-[1.1rem] text-text-color"
+        <span class="font-extrabold text-[1.1rem] "
           >{property.sqft.toLocaleString()}</span
         >
         <span class="text-[0.8rem] text-text-secondary uppercase tracking-wider"
