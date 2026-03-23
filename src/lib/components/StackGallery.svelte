@@ -59,7 +59,7 @@
   });
 </script>
 
-<div class="relative w-full h-[800px] overflow-hidden flex items-center justify-center">
+<div class="relative w-full h-[500px] md:h-[800px] overflow-hidden flex items-center justify-center">
   {#each images as image, index}
     <img
       bind:this={imageRefs[index]}
