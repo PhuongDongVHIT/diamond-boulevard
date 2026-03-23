@@ -209,14 +209,6 @@
                 </div>
               </div>
             </div>
-
-            <a href="/lien-he">
-              <button
-                class="mt-12 w-full py-4 rounded-xl font-bold bg-white dark:bg-slate-800 border hover:bg-accent text-black hover:border-accent transition-colors shadow-sm"
-              >
-                Nhận Báo Giá Chi Tiết
-              </button>
-            </a>
           </div>
 
           <div

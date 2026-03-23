@@ -50,7 +50,7 @@
     <!-- CTA -->
     <div class="hidden md:block">
       <a
-        href="/lien-he"
+        href="https://zalo.me/0986639944"
         class="px-5 py-2 rounded-full bg-text-color text-bg-color font-semibold text-sm hover:scale-105 transition"
       >
         Đăng ký tư vấn

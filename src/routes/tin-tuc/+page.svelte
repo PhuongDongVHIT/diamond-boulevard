@@ -8,7 +8,7 @@
 
     <div class="text-center mb-14">
       <h1 class="text-4xl md:text-6xl font-playfair italic font-bold mb-3">Tin tức Diamon Boulevard</h1>
-      <p class="text-slate-600">Thông tin dự án mới nhất</p>
+      <p>Thông tin dự án mới nhất</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -28,7 +28,7 @@
                 {@html post.title.rendered}
               </h2>
 
-              <div class="text-slate-600 text-sm line-clamp-3 mb-4">
+              <div class="text-sm line-clamp-3 mb-4">
                 {@html post.excerpt.rendered}
               </div>
 

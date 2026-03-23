@@ -29,7 +29,7 @@
         >
           Tin tức Diamond Boulevard
         </h1>
-        <p class="text-slate-500 text-lg">Cập nhật thông tin dự án mới nhất</p>
+        <p class="text-lg">Cập nhật thông tin dự án mới nhất</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

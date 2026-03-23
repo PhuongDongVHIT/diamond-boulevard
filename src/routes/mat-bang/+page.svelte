@@ -156,11 +156,5 @@
       bạn. Hãy đăng ký ngay để nhận file bản vẽ CAD, ảnh 3D phân giải cao và
       bảng cập nhật thiết kế MỚI NHẤT từ Chủ đầu tư Tecco.
     </p>
-    <a
-      href="/lien-he"
-      class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white rounded-full font-bold text-lg hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:-translate-y-1"
-    >
-      Yêu Cầu Tài Liệu Phân Giải Cao
-    </a>
   </div>
 </section>
