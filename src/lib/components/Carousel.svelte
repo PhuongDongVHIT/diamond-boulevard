@@ -69,7 +69,7 @@
   });
 </script>
 
-<div class="relative w-screen h-[80vh] md:h-screen overflow-hidden ">
+<div class="relative w-screen h-[80vh] md:h-screen overflow-hidden">
   {#each items as item, i}
     <div
       class="absolute inset-0 w-screen h-[80vh] md:h-screen bg-cover bg-center flex items-end justify-center transition-opacity duration-1000 ease-in-out {i ===
@@ -92,13 +92,17 @@
         >
           {item.subtitle}
         </h2>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 leading-[1.1]">
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 md:mb-8 leading-[1.1]"
+        >
           {item.title}
         </h1>
-        <button
-          class="px-6 lg:px-8 py-3 lg:py-4 rounded-full font-semibold uppercase tracking-wider text-xs md:text-sm transition-all bg-accent text-white bg-white/20 backdrop-blur-2xl shadow-[0_4px_14px_rgba(0,0,0,0.3)] hover:bg-accent-hover hover:-translate-y-0.5 mt-2 lg:mt-4"
-          >Liên hệ tư vấn</button
-        >
+        <a href="/lien-he">
+          <button
+            class="px-6 lg:px-8 py-3 lg:py-4 rounded-full font-semibold uppercase tracking-wider text-xs md:text-sm transition-all bg-accent text-white bg-white/20 backdrop-blur-2xl shadow-[0_4px_14px_rgba(0,0,0,0.3)] hover:bg-accent-hover hover:-translate-y-0.5 mt-2 lg:mt-4"
+            >Liên hệ tư vấn</button
+          >
+        </a>
       </div>
     </div>
   {/each}

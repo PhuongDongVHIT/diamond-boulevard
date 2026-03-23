@@ -77,11 +77,11 @@
 
     <!-- Left Content -->
     <div class="col-span-2">
-      <div class="flex flex-col gap-2 md:gap-4 pt-4 text-sm dm:text-base">
+      <div class="flex flex-col gap-2 md:gap-4 pt-4 text-sm md:text-base">
         {#each highlights as item}
           <div class="flex gap-4 py-4 border-b ">
             <div
-              class="w-[52px] h-[52px] rounded-full bg-bg-secondary border  flex items-center justify-center text-2xl shrink-0"
+              class="w-[52px] h-[52px] bg-bg-secondary border-b  flex items-center justify-center text-2xl shrink-0"
             >
               {item.icon}
             </div>

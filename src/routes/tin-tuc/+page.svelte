@@ -7,7 +7,7 @@
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="text-center mb-14">
-      <h1 class="text-4xl md:text-6xl font-playfair italic font-bold mb-3">Tin tức Diamon Boulevard</h1>
+      <h1 class="text-4xl md:text-6xl font-playfair italic font-bold mb-3">Tin tức Diamond Boulevard</h1>
       <p>Thông tin dự án mới nhất</p>
     </div>
 
